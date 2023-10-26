@@ -12,6 +12,10 @@
 		B66B91952AEA2B5F006CF777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66B91942AEA2B5F006CF777 /* Assets.xcassets */; };
 		B66B91982AEA2B5F006CF777 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66B91972AEA2B5F006CF777 /* Preview Assets.xcassets */; };
 		B66B91A02AEA2F11006CF777 /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B919F2AEA2F11006CF777 /* Extension+Color.swift */; };
+		B66B91A22AEA31D3006CF777 /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91A12AEA31D3006CF777 /* Extension+Font.swift */; };
+		B66B91A82AEA324C006CF777 /* GmarketSansTTFBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B66B91A52AEA324C006CF777 /* GmarketSansTTFBold.ttf */; };
+		B66B91A92AEA324C006CF777 /* GmarketSansTTFMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B66B91A62AEA324C006CF777 /* GmarketSansTTFMedium.ttf */; };
+		B66B91AA2AEA324C006CF777 /* GmarketSansTTFLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B66B91A72AEA324C006CF777 /* GmarketSansTTFLight.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,11 @@
 		B66B91942AEA2B5F006CF777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B66B91972AEA2B5F006CF777 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B66B919F2AEA2F11006CF777 /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
+		B66B91A12AEA31D3006CF777 /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
+		B66B91A52AEA324C006CF777 /* GmarketSansTTFBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFBold.ttf; sourceTree = "<group>"; };
+		B66B91A62AEA324C006CF777 /* GmarketSansTTFMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFMedium.ttf; sourceTree = "<group>"; };
+		B66B91A72AEA324C006CF777 /* GmarketSansTTFLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFLight.ttf; sourceTree = "<group>"; };
+		B66B91AB2AEA334E006CF777 /* mulmagi-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "mulmagi-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +62,8 @@
 		B66B918F2AEA2B5E006CF777 /* mulmagi_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B66B91AB2AEA334E006CF777 /* mulmagi-SwiftUI-Info.plist */,
+				B66B91A32AEA31FE006CF777 /* Resources */,
 				B66B919E2AEA2EEA006CF777 /* Extension+ */,
 				B66B91902AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift */,
 				B66B91922AEA2B5E006CF777 /* ContentView.swift */,
@@ -74,8 +85,27 @@
 			isa = PBXGroup;
 			children = (
 				B66B919F2AEA2F11006CF777 /* Extension+Color.swift */,
+				B66B91A12AEA31D3006CF777 /* Extension+Font.swift */,
 			);
 			path = "Extension+";
+			sourceTree = "<group>";
+		};
+		B66B91A32AEA31FE006CF777 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B66B91A42AEA3205006CF777 /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B66B91A42AEA3205006CF777 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B66B91A52AEA324C006CF777 /* GmarketSansTTFBold.ttf */,
+				B66B91A72AEA324C006CF777 /* GmarketSansTTFLight.ttf */,
+				B66B91A62AEA324C006CF777 /* GmarketSansTTFMedium.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66B91982AEA2B5F006CF777 /* Preview Assets.xcassets in Resources */,
+				B66B91AA2AEA324C006CF777 /* GmarketSansTTFLight.ttf in Resources */,
 				B66B91952AEA2B5F006CF777 /* Assets.xcassets in Resources */,
+				B66B91A82AEA324C006CF777 /* GmarketSansTTFBold.ttf in Resources */,
+				B66B91A92AEA324C006CF777 /* GmarketSansTTFMedium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +183,7 @@
 			files = (
 				B66B91932AEA2B5E006CF777 /* ContentView.swift in Sources */,
 				B66B91A02AEA2F11006CF777 /* Extension+Color.swift in Sources */,
+				B66B91A22AEA31D3006CF777 /* Extension+Font.swift in Sources */,
 				B66B91912AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +316,7 @@
 				DEVELOPMENT_TEAM = H278GZ4GQ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mulmagi-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -311,6 +346,7 @@
 				DEVELOPMENT_TEAM = H278GZ4GQ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mulmagi-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
