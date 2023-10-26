@@ -11,6 +11,7 @@
 		B66B91932AEA2B5E006CF777 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91922AEA2B5E006CF777 /* ContentView.swift */; };
 		B66B91952AEA2B5F006CF777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66B91942AEA2B5F006CF777 /* Assets.xcassets */; };
 		B66B91982AEA2B5F006CF777 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66B91972AEA2B5F006CF777 /* Preview Assets.xcassets */; };
+		B66B91A02AEA2F11006CF777 /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B919F2AEA2F11006CF777 /* Extension+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B66B91922AEA2B5E006CF777 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B66B91942AEA2B5F006CF777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B66B91972AEA2B5F006CF777 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B66B919F2AEA2F11006CF777 /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		B66B918F2AEA2B5E006CF777 /* mulmagi_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B66B919E2AEA2EEA006CF777 /* Extension+ */,
 				B66B91902AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift */,
 				B66B91922AEA2B5E006CF777 /* ContentView.swift */,
 				B66B91942AEA2B5F006CF777 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				B66B91972AEA2B5F006CF777 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B66B919E2AEA2EEA006CF777 /* Extension+ */ = {
+			isa = PBXGroup;
+			children = (
+				B66B919F2AEA2F11006CF777 /* Extension+Color.swift */,
+			);
+			path = "Extension+";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66B91932AEA2B5E006CF777 /* ContentView.swift in Sources */,
+				B66B91A02AEA2F11006CF777 /* Extension+Color.swift in Sources */,
 				B66B91912AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
