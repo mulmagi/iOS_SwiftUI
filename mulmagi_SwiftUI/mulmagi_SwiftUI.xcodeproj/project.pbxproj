@@ -16,6 +16,7 @@
 		B66B91A82AEA324C006CF777 /* GmarketSansTTFBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B66B91A52AEA324C006CF777 /* GmarketSansTTFBold.ttf */; };
 		B66B91A92AEA324C006CF777 /* GmarketSansTTFMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B66B91A62AEA324C006CF777 /* GmarketSansTTFMedium.ttf */; };
 		B66B91AA2AEA324C006CF777 /* GmarketSansTTFLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B66B91A72AEA324C006CF777 /* GmarketSansTTFLight.ttf */; };
+		B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91AC2AEA37FD006CF777 /* MainTabbedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B66B91A62AEA324C006CF777 /* GmarketSansTTFMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFMedium.ttf; sourceTree = "<group>"; };
 		B66B91A72AEA324C006CF777 /* GmarketSansTTFLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFLight.ttf; sourceTree = "<group>"; };
 		B66B91AB2AEA334E006CF777 /* mulmagi-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "mulmagi-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B66B91AC2AEA37FD006CF777 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				B66B91922AEA2B5E006CF777 /* ContentView.swift */,
 				B66B91942AEA2B5F006CF777 /* Assets.xcassets */,
 				B66B91962AEA2B5F006CF777 /* Preview Content */,
+				B66B91AC2AEA37FD006CF777 /* MainTabbedView.swift */,
 			);
 			path = mulmagi_SwiftUI;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */,
 				B66B91932AEA2B5E006CF777 /* ContentView.swift in Sources */,
 				B66B91A02AEA2F11006CF777 /* Extension+Color.swift in Sources */,
 				B66B91A22AEA31D3006CF777 /* Extension+Font.swift in Sources */,
