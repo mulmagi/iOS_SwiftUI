@@ -16,7 +16,11 @@ struct MenuView: View {
             
             Spacer(minLength: 32)
             
-            
+            VStack (alignment: .center) {
+                PointView()
+                Spacer(minLength: 30)
+            }
+            .padding(.horizontal, 25)
             
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         }
