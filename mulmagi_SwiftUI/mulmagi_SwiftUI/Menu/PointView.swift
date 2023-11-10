@@ -29,17 +29,17 @@ struct PointView: View {
                     }
                     Spacer()
                     
-                    Button(action: {
-                        // TODO: Move to Charge View
-                        print("Charge button tapped")
-                    }) {
+                    // TODO: Change destinatino
+                    NavigationLink(destination: MenuView()) {
                         Text("충전하기")
-                            .padding(EdgeInsets(top: 7, leading: 4, bottom: 7, trailing: 4))
-                            .font(.medium15)
-                            .background(Color.mainBlue)
+                            .font((.medium15))
                             .foregroundColor(.white)
-                            .cornerRadius(10)
+                            .padding(EdgeInsets(top: 7, leading: 4.5, bottom: 7, trailing: 4.5))
                     }
+                    .background(Color.mainBlue)
+                    .cornerRadius(10)
+                    
+                    
                 }
                 .padding(EdgeInsets(top: 19, leading: 25, bottom: 11, trailing: 27))
                 .background(Color.backgroundBlue)
