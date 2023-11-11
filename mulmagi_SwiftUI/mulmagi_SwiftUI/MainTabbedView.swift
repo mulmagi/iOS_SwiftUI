@@ -42,8 +42,10 @@ struct MainTabbedView: View {
             
             ZStack(alignment: .bottom){
                 TabView(selection: $selectedTab) {
-                    ContentView() // MenuView
+                    MenuView() // MenuView
                         .tag(0)
+                        .padding(.horizontal, 25)
+                    // TODO: MenuView 내부의 padding 안되는 이유 찾기.
 
                     ContentView() // MulmagiView
                         .tag(1)
