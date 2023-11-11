@@ -11,9 +11,7 @@ import SwiftUI
 struct mulmagi_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//            MainTabbedView()
-            MenuView()
+            MainTabbedView()
         }
     }
 }

@@ -13,15 +13,17 @@ struct MenuView: View {
     var body: some View {
         NavigationView {
             VStack (alignment: .center) {
-                Spacer(minLength: 30)
+                Spacer(minLength: 80)
                 
                 UserBoxView()
+                    .padding(.horizontal, 38)
                 
                 Spacer(minLength: 30)
                 
                 VStack {
                     PointView()
-                    Spacer(minLength: 30)
+                    Spacer(minLength: 18)
+//                        .padding(.bottom, 18)
                     
                     // Buttons
                     LazyVGrid(columns: [
@@ -33,12 +35,13 @@ struct MenuView: View {
                         }
                     }
                     
-                    Spacer(minLength: 15)
+                    Spacer(minLength: 30)
+                    
+                    NoticeButton()
                 }
                 .padding(.horizontal, 25)
                 
-                
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                Spacer(minLength: 125)
             }
             
             .background(Color.backgroundBlue)

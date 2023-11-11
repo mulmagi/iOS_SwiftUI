@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B65D76212AFCC34B00503C76 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76202AFCC34B00503C76 /* PointView.swift */; };
 		B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76222AFCCED200503C76 /* MenuButton.swift */; };
+		B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76242AFF512900503C76 /* NoticeButton.swift */; };
 		B66B91912AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91902AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift */; };
 		B66B91932AEA2B5E006CF777 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91922AEA2B5E006CF777 /* ContentView.swift */; };
 		B66B91952AEA2B5F006CF777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66B91942AEA2B5F006CF777 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		B65D76202AFCC34B00503C76 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 		B65D76222AFCCED200503C76 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		B65D76242AFF512900503C76 /* NoticeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeButton.swift; sourceTree = "<group>"; };
 		B66B918D2AEA2B5E006CF777 /* mulmagi_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mulmagi_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66B91902AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mulmagi_SwiftUIApp.swift; sourceTree = "<group>"; };
 		B66B91922AEA2B5E006CF777 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				B66B91B12AEA4DB3006CF777 /* UserBoxView.swift */,
 				B65D76202AFCC34B00503C76 /* PointView.swift */,
 				B65D76222AFCCED200503C76 /* MenuButton.swift */,
+				B65D76242AFF512900503C76 /* NoticeButton.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */,
+				B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */,
 				B66B91B02AEA4D5C006CF777 /* MenuView.swift in Sources */,
 				B66B91932AEA2B5E006CF777 /* ContentView.swift in Sources */,
 				B66B91A02AEA2F11006CF777 /* Extension+Color.swift in Sources */,
