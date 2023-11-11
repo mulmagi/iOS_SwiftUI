@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PointView: View {
     var body: some View {
-        NavigationView {
+//        NavigationView {
             NavigationLink(destination: ContentView()) {
                 HStack () {
                     VStack (alignment: .leading) {
@@ -42,11 +42,11 @@ struct PointView: View {
                     
                 }
                 .padding(EdgeInsets(top: 19, leading: 25, bottom: 11, trailing: 27))
-                .background(Color.backgroundBlue)
+                .background(.white)
 
                 .cornerRadius(15)
             }
-        }
+//        }
     }
 }
 
