@@ -20,7 +20,7 @@ struct MenuButton: View {
                         .padding(.bottom, 15)
                         .padding(.top, 17)
                     
-                    HStack {
+                    HStack (alignment: .bottom) {
                         Text(menuName)
                             .font(.medium15)
                             .foregroundColor(.darkNavy)
@@ -29,7 +29,6 @@ struct MenuButton: View {
                         if let menuInfo = menuInfoText(menuName: menuName) {
                             Text(menuInfo)
                                 .font(.light10)
-                                .baselineOffset(-3)
                                 .foregroundColor(.darkGray)
                                 .padding(.trailing, 20)
                         } else {
@@ -44,6 +43,7 @@ struct MenuButton: View {
                 .background(.white)
                 .cornerRadius(15)
             }
+            
         }
     }
 }
