@@ -24,6 +24,9 @@
 		B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91AC2AEA37FD006CF777 /* MainTabbedView.swift */; };
 		B66B91B02AEA4D5C006CF777 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91AF2AEA4D5C006CF777 /* MenuView.swift */; };
 		B66B91B22AEA4DB3006CF777 /* UserBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91B12AEA4DB3006CF777 /* UserBoxView.swift */; };
+		B6D68FA32B03311600FD5A14 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA22B03311600FD5A14 /* NotificationView.swift */; };
+		B6D68FA62B03385E00FD5A14 /* InsetGroupedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */; };
+		B6D68FA82B03521600FD5A14 /* TempData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA72B03521600FD5A14 /* TempData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		B66B91AC2AEA37FD006CF777 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
 		B66B91AF2AEA4D5C006CF777 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B66B91B12AEA4DB3006CF777 /* UserBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBoxView.swift; sourceTree = "<group>"; };
+		B6D68FA22B03311600FD5A14 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedListView.swift; sourceTree = "<group>"; };
+		B6D68FA72B03521600FD5A14 /* TempData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +84,9 @@
 		B66B918F2AEA2B5E006CF777 /* mulmagi_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B6D68FA42B03384300FD5A14 /* Reusable */,
 				B66B91AE2AEA4D4B006CF777 /* Menu */,
+				B6D68FA12B03310300FD5A14 /* Notification */,
 				B66B91AB2AEA334E006CF777 /* mulmagi-SwiftUI-Info.plist */,
 				B66B91A32AEA31FE006CF777 /* Resources */,
 				B66B919E2AEA2EEA006CF777 /* Extension+ */,
@@ -87,6 +95,7 @@
 				B66B91942AEA2B5F006CF777 /* Assets.xcassets */,
 				B66B91962AEA2B5F006CF777 /* Preview Content */,
 				B66B91AC2AEA37FD006CF777 /* MainTabbedView.swift */,
+				B6D68FA72B03521600FD5A14 /* TempData.swift */,
 			);
 			path = mulmagi_SwiftUI;
 			sourceTree = "<group>";
@@ -138,6 +147,22 @@
 				B65D76282AFF798500503C76 /* UseInfoView.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		B6D68FA12B03310300FD5A14 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				B6D68FA22B03311600FD5A14 /* NotificationView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		B6D68FA42B03384300FD5A14 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,8 +248,11 @@
 				B66B91A22AEA31D3006CF777 /* Extension+Font.swift in Sources */,
 				B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */,
 				B66B91912AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift in Sources */,
+				B6D68FA32B03311600FD5A14 /* NotificationView.swift in Sources */,
+				B6D68FA82B03521600FD5A14 /* TempData.swift in Sources */,
 				B66B91B22AEA4DB3006CF777 /* UserBoxView.swift in Sources */,
 				B65D76212AFCC34B00503C76 /* PointView.swift in Sources */,
+				B6D68FA62B03385E00FD5A14 /* InsetGroupedListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
