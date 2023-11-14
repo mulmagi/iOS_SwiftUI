@@ -12,7 +12,7 @@ struct MenuButton: View {
     
     var body: some View {
         GeometryReader { geometry in
-            NavigationLink (destination: ContentView()) {
+            NavigationLink (destination: destinationView(menuName: menuName)) {
                 VStack (alignment: .leading) {
                     Image("alarm-icon")
                         .frame(width:60, height: 60)
@@ -45,6 +45,20 @@ struct MenuButton: View {
             }
             
         }
+    }
+}
+private func destinationView(menuName: String) -> AnyView {
+    switch menuName {
+    case "이용내역":
+        return AnyView(ContentView())
+    case "고객센터":
+        return AnyView(ContentView())
+    case "이용안내":
+        return AnyView(UseInfoView())
+    case "고객안내":
+        return AnyView(ContentView())
+    default:
+        return AnyView(ContentView())
     }
 }
 

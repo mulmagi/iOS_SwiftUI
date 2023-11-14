@@ -16,6 +16,13 @@ struct ContentView: View {
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
                 Text("Hello, world!")
+                
+                VStack {
+                    Text("This is Content View").font(.bold15)
+                    Text("This is Content View").font(.medium15)
+                    Text("This is Content View").font(.medium10)
+                    Text("This is Content View").font(.light10)
+                }
             }
             .padding()
         }
