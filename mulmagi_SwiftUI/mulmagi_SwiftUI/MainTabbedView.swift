@@ -47,7 +47,7 @@ struct MainTabbedView: View {
                         .padding(.horizontal, 25)
                     // TODO: MenuView 내부의 padding 안되는 이유 찾기.
 
-                    ContentView() // MulmagiView
+                    UseInfoView() // MulmagiView
                         .tag(1)
 
                     ContentView() // AlarmView
