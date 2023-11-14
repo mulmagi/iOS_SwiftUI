@@ -50,7 +50,7 @@ struct MainTabbedView: View {
                     UseInfoView() // MulmagiView
                         .tag(1)
 
-                    ContentView() // AlarmView
+                    NotificationView() // AlarmView
                         .tag(2)
 
                 }
