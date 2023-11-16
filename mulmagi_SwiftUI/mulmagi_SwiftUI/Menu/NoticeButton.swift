@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NoticeButton: View {
     var body: some View {
-        NavigationLink(destination: ContentView()) {
+        NavigationLink(destination: NoticeView()) {
             
             HStack (alignment: .center, spacing: 20) {
                 Image("alarm-icon")
