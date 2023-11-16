@@ -58,3 +58,8 @@ var dataExampleBorrow: [Data] = [
     Data(type: "대여 / 반납", header: "반납", title: "가톨릭대학교 성모병원 | 1번 반납 완료.", body: nil, date: Date()),
     Data(type: "대여 / 반납", header: "시간", title: "물막이 반난 시간이 10분 남았습니다.", body: nil, date: Date())
 ]
+
+var dataExampleNotice: [Data] = [
+    Data(type: "공지사항", header: "공지", title: "이용요금 인상 안내", body: nil, date: Date()),
+    Data(type: "공지사항", header: "공지", title: "오류로 인한 포인트 일괄 지급 안내", body: nil, date: Date())
+]
