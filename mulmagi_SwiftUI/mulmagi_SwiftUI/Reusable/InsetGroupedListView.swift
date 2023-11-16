@@ -49,7 +49,7 @@ struct InsetGroupedListView: View {
                                     } else {
                                         // Use at Noticeview
                                         NavigationLink {
-                                            ContentView()
+                                            NoticeDetailView()
                                         } label: {
                                             ListInnerView(item: item, selectedType: selectedType)
                                         }

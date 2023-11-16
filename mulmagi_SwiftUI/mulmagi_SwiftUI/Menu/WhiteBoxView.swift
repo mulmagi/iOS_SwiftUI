@@ -54,7 +54,7 @@ struct WhiteBoxView: View {
 
 private func titleText(menuName: String) -> Bool {
     switch menuName {
-    case "공지사항":
+    case "공지사항", "공지사항화면":
         return true
     default:
         return false
