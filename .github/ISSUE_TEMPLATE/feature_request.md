@@ -1,20 +1,21 @@
 ---
-name: Feature request
+name: "✅ Feature"
 about: Suggest an idea for this project
-title: ''
+title: "[Feat]"
 labels: ''
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**Issue : Feature**
+Feature 작업 사항을 작성해주세요
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**Description**
+작업사항에 대한 설명을 작성해주세요
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Todo**
+- [ ] todo
+- [ ] todo
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Reference(Optional)**
+작업에 대해 참고하거나 알아야 할 기타사항이 있다면 작성해주세요.
