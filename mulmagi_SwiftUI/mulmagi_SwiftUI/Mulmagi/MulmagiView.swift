@@ -20,23 +20,43 @@ struct MulmagiView: View {
     @State var tracking: MapUserTrackingMode = .follow
     @ObservedObject private var locationManager = LocationManager()
     
+    @State private var umbrellaStands: [UmbrellaStand] = []
+    
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: $tracking)
+            // interactionMode: .all - panning, zoom 모두 허용.
+
+            Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: $tracking, annotationItems: umbrellaStands) { stand in
+                MapAnnotation(coordinate: stand.location) {
+                    if stand.total - stand.available.count == 0 {
+                        Image(systemName: "heart")
+                    } else {
+                        Image(systemName: "heart.fill")
+                    }
+                }
+            }
                 .accentColor(.blue)
                 .onAppear {
                     let manager = CLLocationManager()
                     manager.requestWhenInUseAuthorization()
                     manager.startUpdatingLocation()
+                    loadUmbrellaStands()
                 }
-            // interactionMode: .all - panning, zoom 모두 허용.
                 .onChange(of: locationManager.location) { newLocation in
                     if let coordinate = newLocation?.coordinate {
                         region.center = coordinate
                     }
                 }
+
         }
         .ignoresSafeArea()
+    }
+    
+    private func loadUmbrellaStands() {
+        umbrellaStands = [
+            UmbrellaStand(id: 1, location: CLLocationCoordinate2D(latitude: 37.5094195, longitude: 127.0031263), total: 10, available: [1, 3, 4, 12]),
+            UmbrellaStand(id: 2, location: CLLocationCoordinate2D(latitude: 37.5016116, longitude: 127.0047678), total: 3, available: [3, 1, 9])
+        ]
     }
 }
 

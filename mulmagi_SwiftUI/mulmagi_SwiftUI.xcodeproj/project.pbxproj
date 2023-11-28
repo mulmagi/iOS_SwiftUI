@@ -31,6 +31,7 @@
 		B6D68FAB2B03A5EE00FD5A14 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FAA2B03A5EE00FD5A14 /* NoticeView.swift */; };
 		B6D68FAD2B063F2700FD5A14 /* NoticeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FAC2B063F2700FD5A14 /* NoticeDetailView.swift */; };
 		B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA75442B15CBF000703BCE /* LocationManager.swift */; };
+		B6EA75472B15D1FB00703BCE /* UmbrellaStandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA75462B15D1FB00703BCE /* UmbrellaStandModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		B6D68FAA2B03A5EE00FD5A14 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		B6D68FAC2B063F2700FD5A14 /* NoticeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailView.swift; sourceTree = "<group>"; };
 		B6EA75442B15CBF000703BCE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B6EA75462B15D1FB00703BCE /* UmbrellaStandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaStandModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				B66B91A42AEA3205006CF777 /* Font */,
 				B6EA75442B15CBF000703BCE /* LocationManager.swift */,
+				B6EA75462B15D1FB00703BCE /* UmbrellaStandModel.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				B65D76292AFF798500503C76 /* UseInfoView.swift in Sources */,
 				B65D76272AFF700900503C76 /* WhiteBoxView.swift in Sources */,
+				B6EA75472B15D1FB00703BCE /* UmbrellaStandModel.swift in Sources */,
 				B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */,
 				B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */,
 				B66B91B02AEA4D5C006CF777 /* MenuView.swift in Sources */,
