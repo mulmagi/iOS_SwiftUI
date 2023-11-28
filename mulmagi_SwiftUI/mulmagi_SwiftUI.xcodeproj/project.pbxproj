@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60C2A032B079FF50083715B /* MulmagiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C2A022B079FF50083715B /* MulmagiView.swift */; };
 		B65D76212AFCC34B00503C76 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76202AFCC34B00503C76 /* PointView.swift */; };
 		B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76222AFCCED200503C76 /* MenuButton.swift */; };
 		B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76242AFF512900503C76 /* NoticeButton.swift */; };
@@ -29,9 +30,12 @@
 		B6D68FA82B03521600FD5A14 /* TempData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA72B03521600FD5A14 /* TempData.swift */; };
 		B6D68FAB2B03A5EE00FD5A14 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FAA2B03A5EE00FD5A14 /* NoticeView.swift */; };
 		B6D68FAD2B063F2700FD5A14 /* NoticeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FAC2B063F2700FD5A14 /* NoticeDetailView.swift */; };
+		B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA75442B15CBF000703BCE /* LocationManager.swift */; };
+		B6EA75472B15D1FB00703BCE /* UmbrellaStandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA75462B15D1FB00703BCE /* UmbrellaStandModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B60C2A022B079FF50083715B /* MulmagiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulmagiView.swift; sourceTree = "<group>"; };
 		B65D76202AFCC34B00503C76 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 		B65D76222AFCCED200503C76 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		B65D76242AFF512900503C76 /* NoticeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeButton.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		B6D68FA72B03521600FD5A14 /* TempData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempData.swift; sourceTree = "<group>"; };
 		B6D68FAA2B03A5EE00FD5A14 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		B6D68FAC2B063F2700FD5A14 /* NoticeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailView.swift; sourceTree = "<group>"; };
+		B6EA75442B15CBF000703BCE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B6EA75462B15D1FB00703BCE /* UmbrellaStandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaStandModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B60C2A012B079FAF0083715B /* Mulmagi */ = {
+			isa = PBXGroup;
+			children = (
+				B60C2A022B079FF50083715B /* MulmagiView.swift */,
+			);
+			path = Mulmagi;
+			sourceTree = "<group>";
+		};
 		B66B91842AEA2B5E006CF777 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +105,7 @@
 				B6D68FA42B03384300FD5A14 /* Reusable */,
 				B66B91AE2AEA4D4B006CF777 /* Menu */,
 				B6D68FA92B03A5C000FD5A14 /* Notice */,
+				B60C2A012B079FAF0083715B /* Mulmagi */,
 				B6D68FA12B03310300FD5A14 /* Notification */,
 				B66B91AB2AEA334E006CF777 /* mulmagi-SwiftUI-Info.plist */,
 				B66B91A32AEA31FE006CF777 /* Resources */,
@@ -126,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				B66B91A42AEA3205006CF777 /* Font */,
+				B6EA75442B15CBF000703BCE /* LocationManager.swift */,
+				B6EA75462B15D1FB00703BCE /* UmbrellaStandModel.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -254,6 +271,7 @@
 			files = (
 				B65D76292AFF798500503C76 /* UseInfoView.swift in Sources */,
 				B65D76272AFF700900503C76 /* WhiteBoxView.swift in Sources */,
+				B6EA75472B15D1FB00703BCE /* UmbrellaStandModel.swift in Sources */,
 				B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */,
 				B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */,
 				B66B91B02AEA4D5C006CF777 /* MenuView.swift in Sources */,
@@ -261,10 +279,12 @@
 				B66B91A02AEA2F11006CF777 /* Extension+Color.swift in Sources */,
 				B66B91A22AEA31D3006CF777 /* Extension+Font.swift in Sources */,
 				B6D68FAB2B03A5EE00FD5A14 /* NoticeView.swift in Sources */,
+				B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */,
 				B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */,
 				B6D68FAD2B063F2700FD5A14 /* NoticeDetailView.swift in Sources */,
 				B66B91912AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift in Sources */,
 				B6D68FA32B03311600FD5A14 /* NotificationView.swift in Sources */,
+				B60C2A032B079FF50083715B /* MulmagiView.swift in Sources */,
 				B6D68FA82B03521600FD5A14 /* TempData.swift in Sources */,
 				B66B91B22AEA4DB3006CF777 /* UserBoxView.swift in Sources */,
 				B65D76212AFCC34B00503C76 /* PointView.swift in Sources */,
