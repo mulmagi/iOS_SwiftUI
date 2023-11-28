@@ -47,7 +47,23 @@ struct MulmagiView: View {
                         region.center = coordinate
                     }
                 }
-
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button {
+                        if let location = locationManager.location {
+                            region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+                        }
+                    } label: {
+                        Image(systemName: "location.circle")
+                            .foregroundColor(.pink)
+                            .font(.system(size: 50))
+                    }
+                    .padding()
+                }
+                Spacer()
+            }
         }
         .ignoresSafeArea()
     }
