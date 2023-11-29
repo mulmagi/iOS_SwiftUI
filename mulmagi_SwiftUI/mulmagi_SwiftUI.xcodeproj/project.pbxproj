@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B60C2A032B079FF50083715B /* MulmagiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C2A022B079FF50083715B /* MulmagiView.swift */; };
+		B60F68432B17117900A40603 /* QRScanBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F68422B17117900A40603 /* QRScanBtn.swift */; };
 		B65D76212AFCC34B00503C76 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76202AFCC34B00503C76 /* PointView.swift */; };
 		B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76222AFCCED200503C76 /* MenuButton.swift */; };
 		B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76242AFF512900503C76 /* NoticeButton.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		B60C2A022B079FF50083715B /* MulmagiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulmagiView.swift; sourceTree = "<group>"; };
+		B60F68422B17117900A40603 /* QRScanBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanBtn.swift; sourceTree = "<group>"; };
 		B65D76202AFCC34B00503C76 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 		B65D76222AFCCED200503C76 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		B65D76242AFF512900503C76 /* NoticeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeButton.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */,
+				B60F68422B17117900A40603 /* QRScanBtn.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				B65D76292AFF798500503C76 /* UseInfoView.swift in Sources */,
 				B65D76272AFF700900503C76 /* WhiteBoxView.swift in Sources */,
+				B60F68432B17117900A40603 /* QRScanBtn.swift in Sources */,
 				B6EA75472B15D1FB00703BCE /* UmbrellaStandModel.swift in Sources */,
 				B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */,
 				B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */,
