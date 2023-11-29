@@ -29,9 +29,9 @@ struct MulmagiView: View {
             Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: $tracking, annotationItems: umbrellaStands) { stand in
                 MapAnnotation(coordinate: stand.location) {
                     if stand.total - stand.available.count == 0 {
-                        Image(systemName: "heart")
+                        Image("umbrella-none")
                     } else {
-                        Image(systemName: "heart.fill")
+                        Image("umbrella-exist")
                     }
                 }
             }
@@ -47,7 +47,10 @@ struct MulmagiView: View {
                         region.center = coordinate
                     }
                 }
+                .ignoresSafeArea()
             VStack {
+                QRScanBtn()
+                    .padding(.top, 10)
                 Spacer()
                 HStack {
                     Spacer()
@@ -56,16 +59,17 @@ struct MulmagiView: View {
                             region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
                         }
                     } label: {
-                        Image(systemName: "location.circle")
+                        Image("current-location")
                             .foregroundColor(.pink)
                             .font(.system(size: 50))
+                            .frame(width: 42, height: 42)
                     }
-                    .padding()
+                    .padding(.bottom, 84)
+                    .padding(.trailing, 26)
                 }
-                Spacer()
             }
         }
-        .ignoresSafeArea()
+
     }
     
     private func loadUmbrellaStands() {
