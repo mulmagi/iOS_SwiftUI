@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import AVFoundation
 
 struct ScanView: View {
     @State private var session: AVCaptureSession = .init()
@@ -15,6 +14,7 @@ struct ScanView: View {
     @State private var showError: Bool = false
     @State private var cameraPermission: Permission = .idle
     @Environment(\.openURL) private var openURL
+    @StateObject private var qrDelegate = QRScannerDelegate()
     
     var body: some View {
         NavigationView {
@@ -98,27 +98,66 @@ struct ScanView: View {
             switch AVCaptureDevice.authorizationStatus(for: .video) {
             case .authorized:
                 cameraPermission = .approved
+                setUpCamera()
             case .notDetermined:
                 // Request Camera Access
                 if await AVCaptureDevice.requestAccess(for: .video) {
                     // Permission Granted
                     cameraPermission = .approved
+                    setUpCamera()
                 } else {
                     // Permission Denied
                     cameraPermission = .denied
                     
                     // Present Error Message
-                    pressentError("QR 스캔을 위해 카메라 접근을 허용해주세요.")
+                    presentError("QR 스캔을 위해 카메라 접근을 허용해주세요.")
                 }
             case .denied, .restricted:
                 cameraPermission = .denied
-                pressentError("QR 스캔을 위해 카메라 접근을 허용해주세요.")
+                presentError("QR 스캔을 위해 카메라 접근을 허용해주세요.")
             default: break
             }
         }
     }
     
-    func pressentError(_ message: String) {
+    func setUpCamera() {
+        do {
+            guard let device = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back).devices.first else {
+                presentError("Unknown Error")
+                return
+            }
+            
+            // Camera Input
+            let input = try AVCaptureDeviceInput(device: device)
+            
+            guard session.canAddInput(input), session.canAddOutput(qrOutput) else {
+                presentError("Unknown Error")
+                return
+            }
+            
+            // Add Input, Output to Camera Session
+            session.beginConfiguration()
+            session.addInput(input)
+            session.addOutput(qrOutput)
+            
+            // Output config to read QR Code
+            qrOutput.metadataObjectTypes = [.qr]
+            
+            // Add Delegate to Retriece the Fetched QR From Camera
+            qrOutput.setMetadataObjectsDelegate(qrDelegate, queue: .main)
+            session.commitConfiguration()
+            
+            // Session Start at Background
+            DispatchQueue.global(qos: .background).async {
+                session.startRunning()
+            }
+            
+        } catch {
+            presentError(error.localizedDescription)
+        }
+    }
+    
+    func presentError(_ message: String) {
         errorMessage = message
         showError.toggle()
     }
