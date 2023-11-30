@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B60C2A032B079FF50083715B /* MulmagiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C2A022B079FF50083715B /* MulmagiView.swift */; };
 		B60F68432B17117900A40603 /* QRScanBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F68422B17117900A40603 /* QRScanBtn.swift */; };
+		B60F68452B17159F00A40603 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F68442B17159F00A40603 /* ScanView.swift */; };
 		B65D76212AFCC34B00503C76 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76202AFCC34B00503C76 /* PointView.swift */; };
 		B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76222AFCCED200503C76 /* MenuButton.swift */; };
 		B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76242AFF512900503C76 /* NoticeButton.swift */; };
@@ -26,6 +27,7 @@
 		B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91AC2AEA37FD006CF777 /* MainTabbedView.swift */; };
 		B66B91B02AEA4D5C006CF777 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91AF2AEA4D5C006CF777 /* MenuView.swift */; };
 		B66B91B22AEA4DB3006CF777 /* UserBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B91B12AEA4DB3006CF777 /* UserBoxView.swift */; };
+		B67C82A52B1853F100800F35 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C82A42B1853F100800F35 /* CameraView.swift */; };
 		B6D68FA32B03311600FD5A14 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA22B03311600FD5A14 /* NotificationView.swift */; };
 		B6D68FA62B03385E00FD5A14 /* InsetGroupedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */; };
 		B6D68FA82B03521600FD5A14 /* TempData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA72B03521600FD5A14 /* TempData.swift */; };
@@ -38,6 +40,7 @@
 /* Begin PBXFileReference section */
 		B60C2A022B079FF50083715B /* MulmagiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulmagiView.swift; sourceTree = "<group>"; };
 		B60F68422B17117900A40603 /* QRScanBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanBtn.swift; sourceTree = "<group>"; };
+		B60F68442B17159F00A40603 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		B65D76202AFCC34B00503C76 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 		B65D76222AFCCED200503C76 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		B65D76242AFF512900503C76 /* NoticeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeButton.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		B66B91AC2AEA37FD006CF777 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
 		B66B91AF2AEA4D5C006CF777 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B66B91B12AEA4DB3006CF777 /* UserBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBoxView.swift; sourceTree = "<group>"; };
+		B67C82A42B1853F100800F35 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		B6D68FA22B03311600FD5A14 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedListView.swift; sourceTree = "<group>"; };
 		B6D68FA72B03521600FD5A14 /* TempData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempData.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				B60C2A022B079FF50083715B /* MulmagiView.swift */,
+				B60F68442B17159F00A40603 /* ScanView.swift */,
+				B67C82A42B1853F100800F35 /* CameraView.swift */,
 			);
 			path = Mulmagi;
 			sourceTree = "<group>";
@@ -277,12 +283,14 @@
 				B60F68432B17117900A40603 /* QRScanBtn.swift in Sources */,
 				B6EA75472B15D1FB00703BCE /* UmbrellaStandModel.swift in Sources */,
 				B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */,
+				B60F68452B17159F00A40603 /* ScanView.swift in Sources */,
 				B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */,
 				B66B91B02AEA4D5C006CF777 /* MenuView.swift in Sources */,
 				B66B91932AEA2B5E006CF777 /* ContentView.swift in Sources */,
 				B66B91A02AEA2F11006CF777 /* Extension+Color.swift in Sources */,
 				B66B91A22AEA31D3006CF777 /* Extension+Font.swift in Sources */,
 				B6D68FAB2B03A5EE00FD5A14 /* NoticeView.swift in Sources */,
+				B67C82A52B1853F100800F35 /* CameraView.swift in Sources */,
 				B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */,
 				B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */,
 				B6D68FAD2B063F2700FD5A14 /* NoticeDetailView.swift in Sources */,

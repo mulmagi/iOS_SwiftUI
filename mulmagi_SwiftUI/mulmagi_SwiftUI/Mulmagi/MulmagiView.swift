@@ -23,18 +23,20 @@ struct MulmagiView: View {
     @State private var umbrellaStands: [UmbrellaStand] = []
     
     var body: some View {
-        ZStack {
-            // interactionMode: .all - panning, zoom 모두 허용.
-
-            Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: $tracking, annotationItems: umbrellaStands) { stand in
-                MapAnnotation(coordinate: stand.location) {
-                    if stand.total - stand.available.count == 0 {
-                        Image("umbrella-none")
-                    } else {
-                        Image("umbrella-exist")
+        NavigationView {
+            
+            ZStack {
+                // interactionMode: .all - panning, zoom 모두 허용.
+                
+                Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: $tracking, annotationItems: umbrellaStands) { stand in
+                    MapAnnotation(coordinate: stand.location) {
+                        if stand.total - stand.available.count == 0 {
+                            Image("umbrella-none")
+                        } else {
+                            Image("umbrella-exist")
+                        }
                     }
                 }
-            }
                 .accentColor(.blue)
                 .onAppear {
                     let manager = CLLocationManager()
@@ -48,30 +50,30 @@ struct MulmagiView: View {
                     }
                 }
                 .ignoresSafeArea()
-            VStack {
-                QRScanBtn()
-                    .padding(.top, 10)
-                Spacer()
-                HStack {
+                VStack {
+                    QRScanBtn()
+                        .padding(.top, 10)
                     Spacer()
-                    Button {
-                        if let location = locationManager.location {
-                            region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+                    HStack {
+                        Spacer()
+                        Button {
+                            if let location = locationManager.location {
+                                region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+                            }
+                        } label: {
+                            Image("current-location")
+                                .foregroundColor(.pink)
+                                .font(.system(size: 50))
+                                .frame(width: 42, height: 42)
                         }
-                    } label: {
-                        Image("current-location")
-                            .foregroundColor(.pink)
-                            .font(.system(size: 50))
-                            .frame(width: 42, height: 42)
+                        .padding(.bottom, 84)
+                        .padding(.trailing, 26)
                     }
-                    .padding(.bottom, 84)
-                    .padding(.trailing, 26)
                 }
             }
         }
-
     }
-    
+                
     private func loadUmbrellaStands() {
         umbrellaStands = [
             UmbrellaStand(id: 1, location: CLLocationCoordinate2D(latitude: 37.5094195, longitude: 127.0031263), total: 10, available: [1, 3, 4, 12]),

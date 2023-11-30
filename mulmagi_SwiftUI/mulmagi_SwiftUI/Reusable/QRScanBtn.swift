@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QRScanBtn: View {
     var body: some View {
-        NavigationLink(destination: ContentView()) {
+        NavigationLink(destination: ScanView()) {
             HStack {
                 Image("scan")
                 
@@ -27,7 +27,6 @@ struct QRScanBtn: View {
             .background(Color.darkNavy)
             .cornerRadius(20)
         }
-
     }
 }
 
