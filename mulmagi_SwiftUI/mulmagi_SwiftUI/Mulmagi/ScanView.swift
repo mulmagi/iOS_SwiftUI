@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ScanView: View {
     @State private var session: AVCaptureSession = .init()
@@ -33,7 +34,6 @@ struct ScanView: View {
                         }
                         
                         
-                        // TODO: QR 스캔 박스
                         ZStack {
                             ForEach (0...4, id: \.self) { index in
                                 let rotation = Double(index) * 90
