@@ -13,6 +13,8 @@ struct ScanView: View {
     @State private var qrOutput: AVCaptureMetadataOutput = .init()
     @State private var errorMessage: String = ""
     @State private var showError: Bool = false
+    @State private var cameraPermission: Permission = .idle
+    @Environment(\.openURL) private var openURL
     
     var body: some View {
         NavigationView {
@@ -48,6 +50,25 @@ struct ScanView: View {
                             
                         }
                         .padding(.bottom, 30)
+                        //  Check Camera Permission
+                        .onAppear(perform: checkCameraPermission)
+                        .alert(errorMessage, isPresented: $showError) {
+                            // Showing setting's button, if permission is denied
+                            if cameraPermission == .denied {
+                                Button("Settings") {
+                                    let settingString = UIApplication.openSettingsURLString
+                                    if let settingURL = URL(string: settingString) {
+                                        // Opening App's Setting, Using openURl SwiftUI API
+                                        openURL(settingURL)
+                                    }
+                                }
+                                
+                                // 취소 버튼
+                                Button("Cancel", role: .cancel) {
+                                    
+                                }
+                            }
+                        }
                         
                         HStack(alignment: .bottom, spacing: 70) {
                             VStack() {
@@ -69,6 +90,37 @@ struct ScanView: View {
             }
         }
         .navigationTitle("대여하기")
+    }
+    
+    // Check Camera Permission
+    func checkCameraPermission() {
+        Task {
+            switch AVCaptureDevice.authorizationStatus(for: .video) {
+            case .authorized:
+                cameraPermission = .approved
+            case .notDetermined:
+                // Request Camera Access
+                if await AVCaptureDevice.requestAccess(for: .video) {
+                    // Permission Granted
+                    cameraPermission = .approved
+                } else {
+                    // Permission Denied
+                    cameraPermission = .denied
+                    
+                    // Present Error Message
+                    pressentError("QR 스캔을 위해 카메라 접근을 허용해주세요.")
+                }
+            case .denied, .restricted:
+                cameraPermission = .denied
+                pressentError("QR 스캔을 위해 카메라 접근을 허용해주세요.")
+            default: break
+            }
+        }
+    }
+    
+    func pressentError(_ message: String) {
+        errorMessage = message
+        showError.toggle()
     }
 }
 
