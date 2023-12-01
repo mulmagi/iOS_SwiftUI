@@ -9,24 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Color.backgroundBlue
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Hello, world!")
-                
-                VStack {
-                    Text("This is Content View").font(.bold15)
-                    Text("This is Content View").font(.medium15)
-                    Text("This is Content View").font(.medium10)
-                    Text("This is Content View").font(.light10)
+        NavigationView {
+            ZStack {
+                Color.backgroundBlue
+                VStack(spacing: 30) {
+                    Image(systemName: "globe")
+                        .imageScale(.large)
+                        .foregroundColor(.accentColor)
+                    Text("Hello, world!")
+                    
+                    VStack {
+                        Text("This is Content View").font(.bold15)
+                        Text("This is Content View").font(.medium15)
+                        Text("This is Content View").font(.medium10)
+                        Text("This is Content View").font(.light10)
+                    }
+                    
+                    NavigationLink(destination: NameView()) {
+                        Text("회원가입 로그인")
+                            .font(.bold20)
+                            .foregroundColor(.mainBlue)
+                    }
                 }
+                .padding()
             }
-            .padding()
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
     }
 }
 
