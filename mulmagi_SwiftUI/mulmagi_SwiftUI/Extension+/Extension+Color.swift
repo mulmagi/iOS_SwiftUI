@@ -25,6 +25,7 @@ extension Color {
     static let lightBlue = Color(hex: "D6E3FB")
     static let mainBlue = Color(hex: "4D7FEF")
     static let darkNavy = Color(hex: "283255")
+    static let lightYellow = Color(hex: "FCD770")
     
     static let darkGray = Color(hex: "555555")
     static let midGray = Color(hex: "929292")

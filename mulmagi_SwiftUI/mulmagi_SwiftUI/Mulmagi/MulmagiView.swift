@@ -25,6 +25,10 @@ struct MulmagiView: View {
     @State var selectedStand: UmbrellaStand?
     @State private var isStandInfoViewVisible: Bool = false
     
+    @State var userState: String = "null"
+    
+
+    
     var body: some View {
         NavigationView {
             
@@ -36,6 +40,7 @@ struct MulmagiView: View {
                         Button {
                             // TODO: StandInfo 통째로 넘겨주기
                             selectedStand = stand
+                            isStandInfoViewVisible = true
                         } label: {
                             if stand.total - stand.available.count == 0 {
                                 Image("umbrella-none")
@@ -84,15 +89,20 @@ struct MulmagiView: View {
                 VStack {
                     Spacer()
                     
-                    if (selectedStand != nil) {
+                    if isStandInfoViewVisible && userState == "null" {
                         StandInfoView(standInfo: $selectedStand)
                             .cornerRadius(20)
                             .padding(.horizontal, 20)
                             .padding(.bottom, 40)
+                    } else {
+                        // OverDue / Rent-ing
                     }
                 }
             }
         
+        }
+        .onTapGesture {
+            isStandInfoViewVisible = false
         }
     }
                 
