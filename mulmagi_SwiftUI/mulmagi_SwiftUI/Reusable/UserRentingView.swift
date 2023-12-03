@@ -48,13 +48,17 @@ struct UserRentingView: View {
                 }
             }
             
-            VStack {
-                Image("scan")
-                    .resizable()
-                    .frame(width: 50, height: 50)
+            NavigationLink {
+                ScanView()
+            } label: {
+                VStack {
+                    Image("scan")
+                        .resizable()
+                        .frame(width: 50, height: 50)
                     
-                Text("반납하기")
-                    .font(.light10)
+                    Text("반납하기")
+                        .font(.light10)
+                }
             }
         }
         .padding(EdgeInsets(top: 19, leading: 25, bottom: 12, trailing: 25))

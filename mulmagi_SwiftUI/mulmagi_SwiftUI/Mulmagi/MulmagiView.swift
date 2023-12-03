@@ -96,6 +96,10 @@ struct MulmagiView: View {
                             .padding(.bottom, 40)
                     } else {
                         // OverDue / Rent-ing
+                        UserRentingView()
+                            .cornerRadius(20)
+                            .padding(.horizontal, 20)
+                            .padding(.bottom, 40)
                     }
                 }
             }

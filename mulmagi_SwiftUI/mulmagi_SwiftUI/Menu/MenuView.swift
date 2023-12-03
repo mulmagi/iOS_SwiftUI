@@ -12,6 +12,7 @@ struct MenuView: View {
     
     var body: some View {
         NavigationView {
+            
             VStack (alignment: .center) {
                 Spacer(minLength: 80)
                 
@@ -23,7 +24,7 @@ struct MenuView: View {
                 VStack {
                     PointView()
                     Spacer(minLength: 18)
-//                        .padding(.bottom, 18)
+                        .padding(.bottom, 18)
                     
                     // Buttons
                     LazyVGrid(columns: [
@@ -43,10 +44,12 @@ struct MenuView: View {
                 
                 Spacer(minLength: 125)
             }
-            
             .background(Color.backgroundBlue)
         }
+        .ignoresSafeArea()
     }
+        
+        
 }
 
 struct MenuView_Previews: PreviewProvider {
