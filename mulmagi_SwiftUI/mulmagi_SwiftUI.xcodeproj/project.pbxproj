@@ -32,6 +32,7 @@
 		B67C82A52B1853F100800F35 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C82A42B1853F100800F35 /* CameraView.swift */; };
 		B67C82A92B187CF000800F35 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C82A82B187CF000800F35 /* Permission.swift */; };
 		B67C82AB2B18B22800800F35 /* QRScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C82AA2B18B22800800F35 /* QRScannerDelegate.swift */; };
+		B6B152F02B1C651200DF2938 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B152EF2B1C651200DF2938 /* PrivacyPolicyView.swift */; };
 		B6D68FA32B03311600FD5A14 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA22B03311600FD5A14 /* NotificationView.swift */; };
 		B6D68FA62B03385E00FD5A14 /* InsetGroupedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */; };
 		B6D68FA82B03521600FD5A14 /* TempData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA72B03521600FD5A14 /* TempData.swift */; };
@@ -69,6 +70,7 @@
 		B67C82A42B1853F100800F35 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		B67C82A82B187CF000800F35 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		B67C82AA2B18B22800800F35 /* QRScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerDelegate.swift; sourceTree = "<group>"; };
+		B6B152EF2B1C651200DF2938 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		B6D68FA22B03311600FD5A14 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedListView.swift; sourceTree = "<group>"; };
 		B6D68FA72B03521600FD5A14 /* TempData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempData.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				B654980D2B18EA6700CFBAE5 /* NameView.swift */,
 				B65498142B19A76600CFBAE5 /* PhoneNumView.swift */,
+				B6B152EF2B1C651200DF2938 /* PrivacyPolicyView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				B6D68FAB2B03A5EE00FD5A14 /* NoticeView.swift in Sources */,
 				B67C82A52B1853F100800F35 /* CameraView.swift in Sources */,
 				B654980E2B18EA6700CFBAE5 /* NameView.swift in Sources */,
+				B6B152F02B1C651200DF2938 /* PrivacyPolicyView.swift in Sources */,
 				B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */,
 				B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */,
 				B6D68FAD2B063F2700FD5A14 /* NoticeDetailView.swift in Sources */,
