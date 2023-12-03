@@ -44,8 +44,6 @@ struct MainTabbedView: View {
                 TabView(selection: $selectedTab) {
                     MenuView() // MenuView
                         .tag(0)
-                        .padding(.horizontal, 25)
-                    // TODO: MenuView 내부의 padding 안되는 이유 찾기.
 
                     MulmagiView() // MulmagiView
                         .tag(1)
@@ -75,7 +73,7 @@ struct MainTabbedView: View {
                 .frame(height: 74)
                 .background(.white)
                 .cornerRadius(25)
-                .padding(.horizontal, 50)
+                .padding(.horizontal, 20)
             }
         }
     }

@@ -44,7 +44,6 @@ struct UserBoxView: View {
                 .foregroundColor(.white)
             }
         }
-//        .frame(width: 315, height: 116)
         .padding(EdgeInsets(top: 13, leading: 23, bottom: 13, trailing: 65))
         .background(Color.mainBlue)
         .cornerRadius(20)

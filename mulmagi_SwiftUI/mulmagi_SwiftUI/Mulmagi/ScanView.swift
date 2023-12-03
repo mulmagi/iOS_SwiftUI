@@ -89,7 +89,6 @@ struct ScanView: View {
                 }
             }
         }
-        .navigationTitle("대여하기")
     }
     
     // Check Camera Permission

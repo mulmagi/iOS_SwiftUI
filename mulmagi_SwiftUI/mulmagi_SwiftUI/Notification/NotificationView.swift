@@ -27,15 +27,13 @@ struct NotificationView: View {
                     
                 }
                 .pickerStyle(.segmented)
-                .padding(.horizontal, 30)
+                .padding(.horizontal, 20)
                 
-                InsetGroupedListView(selectedType: $selectedType)
-                
+                InsetGroupedListView(selectedType: $selectedType)                
                 
                 Spacer()
                 
             }
-            .padding(.horizontal, 15)
             .navigationBarTitle("알림", displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
                 self.isAlarm.toggle()

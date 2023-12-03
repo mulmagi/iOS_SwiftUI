@@ -10,6 +10,7 @@ import CoreLocation
 struct UmbrellaStand: Identifiable {
     let id: Int
     let location: CLLocationCoordinate2D
+    let name: String
     let total: Int
     let available: [Int]
 }

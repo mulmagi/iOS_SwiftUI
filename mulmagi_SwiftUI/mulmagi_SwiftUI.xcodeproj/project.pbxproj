@@ -33,11 +33,13 @@
 		B67C82A92B187CF000800F35 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C82A82B187CF000800F35 /* Permission.swift */; };
 		B67C82AB2B18B22800800F35 /* QRScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C82AA2B18B22800800F35 /* QRScannerDelegate.swift */; };
 		B6B152F02B1C651200DF2938 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B152EF2B1C651200DF2938 /* PrivacyPolicyView.swift */; };
+		B6B152F22B1C6ADC00DF2938 /* StandInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B152F12B1C6ADC00DF2938 /* StandInfoView.swift */; };
 		B6D68FA32B03311600FD5A14 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA22B03311600FD5A14 /* NotificationView.swift */; };
 		B6D68FA62B03385E00FD5A14 /* InsetGroupedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */; };
 		B6D68FA82B03521600FD5A14 /* TempData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FA72B03521600FD5A14 /* TempData.swift */; };
 		B6D68FAB2B03A5EE00FD5A14 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FAA2B03A5EE00FD5A14 /* NoticeView.swift */; };
 		B6D68FAD2B063F2700FD5A14 /* NoticeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D68FAC2B063F2700FD5A14 /* NoticeDetailView.swift */; };
+		B6E765F22B1CD6E7004F11B7 /* UserRentingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E765F12B1CD6E7004F11B7 /* UserRentingView.swift */; };
 		B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA75442B15CBF000703BCE /* LocationManager.swift */; };
 		B6EA75472B15D1FB00703BCE /* UmbrellaStandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA75462B15D1FB00703BCE /* UmbrellaStandModel.swift */; };
 /* End PBXBuildFile section */
@@ -71,11 +73,13 @@
 		B67C82A82B187CF000800F35 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		B67C82AA2B18B22800800F35 /* QRScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerDelegate.swift; sourceTree = "<group>"; };
 		B6B152EF2B1C651200DF2938 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		B6B152F12B1C6ADC00DF2938 /* StandInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandInfoView.swift; sourceTree = "<group>"; };
 		B6D68FA22B03311600FD5A14 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedListView.swift; sourceTree = "<group>"; };
 		B6D68FA72B03521600FD5A14 /* TempData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempData.swift; sourceTree = "<group>"; };
 		B6D68FAA2B03A5EE00FD5A14 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		B6D68FAC2B063F2700FD5A14 /* NoticeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailView.swift; sourceTree = "<group>"; };
+		B6E765F12B1CD6E7004F11B7 /* UserRentingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRentingView.swift; sourceTree = "<group>"; };
 		B6EA75442B15CBF000703BCE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B6EA75462B15D1FB00703BCE /* UmbrellaStandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaStandModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +219,8 @@
 			children = (
 				B6D68FA52B03385E00FD5A14 /* InsetGroupedListView.swift */,
 				B60F68422B17117900A40603 /* QRScanBtn.swift */,
+				B6B152F12B1C6ADC00DF2938 /* StandInfoView.swift */,
+				B6E765F12B1CD6E7004F11B7 /* UserRentingView.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65D76292AFF798500503C76 /* UseInfoView.swift in Sources */,
+				B6E765F22B1CD6E7004F11B7 /* UserRentingView.swift in Sources */,
 				B65D76272AFF700900503C76 /* WhiteBoxView.swift in Sources */,
 				B60F68432B17117900A40603 /* QRScanBtn.swift in Sources */,
 				B6EA75472B15D1FB00703BCE /* UmbrellaStandModel.swift in Sources */,
@@ -319,6 +326,7 @@
 				B6B152F02B1C651200DF2938 /* PrivacyPolicyView.swift in Sources */,
 				B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */,
 				B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */,
+				B6B152F22B1C6ADC00DF2938 /* StandInfoView.swift in Sources */,
 				B6D68FAD2B063F2700FD5A14 /* NoticeDetailView.swift in Sources */,
 				B66B91912AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift in Sources */,
 				B6D68FA32B03311600FD5A14 /* NotificationView.swift in Sources */,
