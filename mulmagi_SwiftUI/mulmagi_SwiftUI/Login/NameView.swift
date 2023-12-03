@@ -43,7 +43,7 @@ struct NameView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: PhoneNumView()) {
                     HStack {
                         Text("다음")
                             .frame(maxWidth: .infinity)

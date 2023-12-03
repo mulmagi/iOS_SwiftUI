@@ -11,6 +11,7 @@
 		B60F68432B17117900A40603 /* QRScanBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F68422B17117900A40603 /* QRScanBtn.swift */; };
 		B60F68452B17159F00A40603 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F68442B17159F00A40603 /* ScanView.swift */; };
 		B654980E2B18EA6700CFBAE5 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B654980D2B18EA6700CFBAE5 /* NameView.swift */; };
+		B65498152B19A76600CFBAE5 /* PhoneNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65498142B19A76600CFBAE5 /* PhoneNumView.swift */; };
 		B65D76212AFCC34B00503C76 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76202AFCC34B00503C76 /* PointView.swift */; };
 		B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76222AFCCED200503C76 /* MenuButton.swift */; };
 		B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76242AFF512900503C76 /* NoticeButton.swift */; };
@@ -45,6 +46,7 @@
 		B60F68422B17117900A40603 /* QRScanBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanBtn.swift; sourceTree = "<group>"; };
 		B60F68442B17159F00A40603 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		B654980D2B18EA6700CFBAE5 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		B65498142B19A76600CFBAE5 /* PhoneNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumView.swift; sourceTree = "<group>"; };
 		B65D76202AFCC34B00503C76 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 		B65D76222AFCCED200503C76 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		B65D76242AFF512900503C76 /* NoticeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeButton.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B654980D2B18EA6700CFBAE5 /* NameView.swift */,
+				B65498142B19A76600CFBAE5 /* PhoneNumView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				B6EA75472B15D1FB00703BCE /* UmbrellaStandModel.swift in Sources */,
 				B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */,
 				B60F68452B17159F00A40603 /* ScanView.swift in Sources */,
+				B65498152B19A76600CFBAE5 /* PhoneNumView.swift in Sources */,
 				B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */,
 				B66B91B02AEA4D5C006CF777 /* MenuView.swift in Sources */,
 				B66B91932AEA2B5E006CF777 /* ContentView.swift in Sources */,
