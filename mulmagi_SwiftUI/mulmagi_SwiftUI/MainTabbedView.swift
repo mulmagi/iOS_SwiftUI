@@ -75,7 +75,7 @@ struct MainTabbedView: View {
                 .frame(height: 74)
                 .background(.white)
                 .cornerRadius(25)
-                .padding(.horizontal, 50)
+                .padding(.horizontal, 20)
             }
         }
     }
