@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PointView: View {
+    @State private var isChargeSheetPresent: Bool = false
+    
     var body: some View {
         NavigationLink(destination: ContentView()) {
             HStack {
@@ -28,15 +30,24 @@ struct PointView: View {
                 }
                 Spacer()
                 
-                // TODO: Change destinatino
-                NavigationLink(destination: MenuView()) {
+                
+                Button {
+                    isChargeSheetPresent.toggle()
+                } label: {
                     Text("충전하기")
                         .font((.medium15))
                         .foregroundColor(.white)
                         .padding(EdgeInsets(top: 7, leading: 4.5, bottom: 7, trailing: 4.5))
                 }
+                .buttonStyle(.bordered)
                 .background(Color.mainBlue)
                 .cornerRadius(10)
+                
+                .fullScreenCover(isPresented: $isChargeSheetPresent) {
+                    PointChargeView()
+                }
+//                .navigationTitle("충전하기")
+
                 
                 
             }
