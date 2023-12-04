@@ -13,6 +13,8 @@
 		B61F45B02B1D4D160056C172 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F45AF2B1D4D160056C172 /* OTPView.swift */; };
 		B61F45B42B1DC5CA0056C172 /* RentCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F45B32B1DC5CA0056C172 /* RentCheckView.swift */; };
 		B61F45B62B1DDE920056C172 /* ReturnCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F45B52B1DDE920056C172 /* ReturnCheckView.swift */; };
+		B61F45B92B1E2C430056C172 /* PointChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F45B82B1E2C430056C172 /* PointChargeView.swift */; };
+		B61F45BB2B1E2D690056C172 /* RadioButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F45BA2B1E2D690056C172 /* RadioButtonStyle.swift */; };
 		B654980E2B18EA6700CFBAE5 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B654980D2B18EA6700CFBAE5 /* NameView.swift */; };
 		B65498152B19A76600CFBAE5 /* PhoneNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65498142B19A76600CFBAE5 /* PhoneNumView.swift */; };
 		B65D76212AFCC34B00503C76 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76202AFCC34B00503C76 /* PointView.swift */; };
@@ -54,6 +56,8 @@
 		B61F45AF2B1D4D160056C172 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		B61F45B32B1DC5CA0056C172 /* RentCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentCheckView.swift; sourceTree = "<group>"; };
 		B61F45B52B1DDE920056C172 /* ReturnCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnCheckView.swift; sourceTree = "<group>"; };
+		B61F45B82B1E2C430056C172 /* PointChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointChargeView.swift; sourceTree = "<group>"; };
+		B61F45BA2B1E2D690056C172 /* RadioButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonStyle.swift; sourceTree = "<group>"; };
 		B654980D2B18EA6700CFBAE5 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		B65498142B19A76600CFBAE5 /* PhoneNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumView.swift; sourceTree = "<group>"; };
 		B65D76202AFCC34B00503C76 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
@@ -114,6 +118,14 @@
 			path = Mulmagi;
 			sourceTree = "<group>";
 		};
+		B61F45B72B1E2C380056C172 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				B61F45B82B1E2C430056C172 /* PointChargeView.swift */,
+			);
+			path = Point;
+			sourceTree = "<group>";
+		};
 		B654980F2B18EA8A00CFBAE5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +155,7 @@
 		B66B918F2AEA2B5E006CF777 /* mulmagi_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B61F45B72B1E2C380056C172 /* Point */,
 				B654980F2B18EA8A00CFBAE5 /* Login */,
 				B6D68FA42B03384300FD5A14 /* Reusable */,
 				B66B91AE2AEA4D4B006CF777 /* Menu */,
@@ -230,6 +243,7 @@
 				B60F68422B17117900A40603 /* QRScanBtn.swift */,
 				B6B152F12B1C6ADC00DF2938 /* StandInfoView.swift */,
 				B6E765F12B1CD6E7004F11B7 /* UserRentingView.swift */,
+				B61F45BA2B1E2D690056C172 /* RadioButtonStyle.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -325,6 +339,7 @@
 				B6EA75472B15D1FB00703BCE /* UmbrellaStandModel.swift in Sources */,
 				B66B91AD2AEA37FD006CF777 /* MainTabbedView.swift in Sources */,
 				B60F68452B17159F00A40603 /* ScanView.swift in Sources */,
+				B61F45BB2B1E2D690056C172 /* RadioButtonStyle.swift in Sources */,
 				B65498152B19A76600CFBAE5 /* PhoneNumView.swift in Sources */,
 				B65D76252AFF512900503C76 /* NoticeButton.swift in Sources */,
 				B66B91B02AEA4D5C006CF777 /* MenuView.swift in Sources */,
@@ -333,6 +348,7 @@
 				B66B91A22AEA31D3006CF777 /* Extension+Font.swift in Sources */,
 				B6D68FAB2B03A5EE00FD5A14 /* NoticeView.swift in Sources */,
 				B67C82A52B1853F100800F35 /* CameraView.swift in Sources */,
+				B61F45B92B1E2C430056C172 /* PointChargeView.swift in Sources */,
 				B654980E2B18EA6700CFBAE5 /* NameView.swift in Sources */,
 				B6B152F02B1C651200DF2938 /* PrivacyPolicyView.swift in Sources */,
 				B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */,
