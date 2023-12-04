@@ -16,6 +16,8 @@ struct PhoneNumView: View {
     @State private var certificateComplete: Bool = false
     @State var isButtonClicked: Bool = false
     
+    @State var isLoginSuccess = false
+    
     var body: some View {
         NavigationView {
             VStack (alignment: .leading, spacing: 3) {
@@ -110,6 +112,7 @@ struct PhoneNumView: View {
                 Button {
                     // API 연결
                     // 인증번호 확인
+                    isLoginSuccess = true
                     
                 } label: {
                     Text("동의하고 시작하기")
@@ -130,6 +133,9 @@ struct PhoneNumView: View {
             
         }
         .navigationTitle("회원가입")
+        .fullScreenCover(isPresented: $isLoginSuccess) {
+            MainTabbedView()
+        }
     }
 }
 
