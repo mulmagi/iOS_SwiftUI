@@ -9,16 +9,22 @@ import SwiftUI
 
 struct MenuButton: View {
     let menuName: String
+    @Environment(\.presentationMode) var presentationMode
+
+    @State private var isSelected: Bool = false
     
     var body: some View {
         GeometryReader { geometry in
-            NavigationLink (destination: destinationView(menuName: menuName)) {
+            Button(action: {
+                isSelected = true
+            }, label: {
                 VStack (alignment: .leading) {
-                    Image("alarm-icon")
+                    Image(destinationIcon(menuName: menuName))
                         .frame(width:60, height: 60)
-                        .aspectRatio(contentMode: .fill)
+                        .aspectRatio(contentMode: .fit)
                         .padding(.bottom, 15)
                         .padding(.top, 17)
+                        .padding(.leading, 20)
                     
                     HStack (alignment: .bottom) {
                         Text(menuName)
@@ -42,6 +48,11 @@ struct MenuButton: View {
                 }
                 .background(.white)
                 .cornerRadius(15)
+                //            }
+            })
+                
+            .fullScreenCover(isPresented: $isSelected) {
+                destinationView(menuName: menuName)
             }
             
         }
@@ -50,15 +61,30 @@ struct MenuButton: View {
 private func destinationView(menuName: String) -> AnyView {
     switch menuName {
     case "이용내역":
-        return AnyView(ContentView())
+        return AnyView(UsageView())
     case "고객센터":
         return AnyView(ContentView())
     case "이용안내":
         return AnyView(UseInfoView())
-    case "고객안내":
+    case "계정설정":
         return AnyView(ContentView())
     default:
         return AnyView(ContentView())
+    }
+}
+
+private func destinationIcon(menuName: String) -> String {
+    switch menuName {
+    case "이용내역":
+        return "usage"
+    case "고객센터":
+        return "chat"
+    case "이용안내":
+        return "useInfo"
+    case "계정설정":
+        return "setting"
+    default:
+        return "usage"
     }
 }
 
