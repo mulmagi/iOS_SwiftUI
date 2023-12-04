@@ -11,6 +11,8 @@
 		B60F68432B17117900A40603 /* QRScanBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F68422B17117900A40603 /* QRScanBtn.swift */; };
 		B60F68452B17159F00A40603 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F68442B17159F00A40603 /* ScanView.swift */; };
 		B61F45B02B1D4D160056C172 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F45AF2B1D4D160056C172 /* OTPView.swift */; };
+		B61F45B42B1DC5CA0056C172 /* RentCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F45B32B1DC5CA0056C172 /* RentCheckView.swift */; };
+		B61F45B62B1DDE920056C172 /* ReturnCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F45B52B1DDE920056C172 /* ReturnCheckView.swift */; };
 		B654980E2B18EA6700CFBAE5 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B654980D2B18EA6700CFBAE5 /* NameView.swift */; };
 		B65498152B19A76600CFBAE5 /* PhoneNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65498142B19A76600CFBAE5 /* PhoneNumView.swift */; };
 		B65D76212AFCC34B00503C76 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76202AFCC34B00503C76 /* PointView.swift */; };
@@ -50,6 +52,8 @@
 		B60F68422B17117900A40603 /* QRScanBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanBtn.swift; sourceTree = "<group>"; };
 		B60F68442B17159F00A40603 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		B61F45AF2B1D4D160056C172 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		B61F45B32B1DC5CA0056C172 /* RentCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentCheckView.swift; sourceTree = "<group>"; };
+		B61F45B52B1DDE920056C172 /* ReturnCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnCheckView.swift; sourceTree = "<group>"; };
 		B654980D2B18EA6700CFBAE5 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		B65498142B19A76600CFBAE5 /* PhoneNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumView.swift; sourceTree = "<group>"; };
 		B65D76202AFCC34B00503C76 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				B60F68442B17159F00A40603 /* ScanView.swift */,
 				B67C82A42B1853F100800F35 /* CameraView.swift */,
 				B61F45AF2B1D4D160056C172 /* OTPView.swift */,
+				B61F45B32B1DC5CA0056C172 /* RentCheckView.swift */,
+				B61F45B52B1DDE920056C172 /* ReturnCheckView.swift */,
 			);
 			path = Mulmagi;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61F45B42B1DC5CA0056C172 /* RentCheckView.swift in Sources */,
 				B65D76292AFF798500503C76 /* UseInfoView.swift in Sources */,
 				B6E765F22B1CD6E7004F11B7 /* UserRentingView.swift in Sources */,
 				B65D76272AFF700900503C76 /* WhiteBoxView.swift in Sources */,
@@ -337,6 +344,7 @@
 				B60C2A032B079FF50083715B /* MulmagiView.swift in Sources */,
 				B6D68FA82B03521600FD5A14 /* TempData.swift in Sources */,
 				B67C82A92B187CF000800F35 /* Permission.swift in Sources */,
+				B61F45B62B1DDE920056C172 /* ReturnCheckView.swift in Sources */,
 				B66B91B22AEA4DB3006CF777 /* UserBoxView.swift in Sources */,
 				B67C82AB2B18B22800800F35 /* QRScannerDelegate.swift in Sources */,
 				B65D76212AFCC34B00503C76 /* PointView.swift in Sources */,
