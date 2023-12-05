@@ -22,7 +22,7 @@ struct NoticeButton: View {
                 
                 Spacer()
                 
-                Image("alarm-icon")
+                Image(systemName: "chevron.right")
                     .padding(.trailing, 25)
                     .foregroundColor(.darkGray)
             }

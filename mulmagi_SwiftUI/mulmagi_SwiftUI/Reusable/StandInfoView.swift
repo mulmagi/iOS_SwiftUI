@@ -30,7 +30,7 @@ struct StandInfoView: View {
                     HStack (spacing: 12) {
                         Text("대여 가능")
                         Text("|")
-                        Text("\(standInfo!.available.count)")
+                        Text("\(standInfo!.available.count) 개")
                     }
                     .font(.medium15)
                     
