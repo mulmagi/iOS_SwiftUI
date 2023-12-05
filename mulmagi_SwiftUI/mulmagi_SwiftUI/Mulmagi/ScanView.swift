@@ -16,9 +16,10 @@ struct ScanView: View {
     @State private var showError: Bool = false
     @State private var cameraPermission: Permission = .idle
     @Environment(\.openURL) private var openURL
-    @StateObject private var qrDelegate = QRScannerDelegate()
-    
-    @State private var opt: Bool = false
+    @ObservedObject private var qrDelegate = QRScannerDelegate()
+    @State private var isCorrectCode: Bool = false
+    @State private var moveToOTP: Bool = false
+    @State private var moveToHome: Bool = false
     
     var body: some View {
         ZStack {
@@ -73,16 +74,8 @@ struct ScanView: View {
                     }
                     
                     HStack(alignment: .bottom, spacing: 70) {
-//                        NavigationLink (destination: OTPView()){
-//                            VStack {
-//                                Image("keyboard")
-//                                Text("코드 입력")
-//                                    .foregroundColor(.white)
-//                                    .font(.medium15)
-//                            }
-//                        }
                         Button {
-                            opt = true
+                            moveToOTP = true
                         } label: {
                             VStack {
                                 Image("keyboard")
@@ -90,6 +83,9 @@ struct ScanView: View {
                                     .foregroundColor(.white)
                                     .font(.medium15)
                             }
+                        }
+                        .fullScreenCover(isPresented: $moveToOTP) {
+                            OTPView()
                         }
 
                         
@@ -105,6 +101,15 @@ struct ScanView: View {
                             }
                         }
                     }
+                    
+
+                }
+                .alert(isPresented: $qrDelegate.isCorrectCode, content: {
+                    Alert(title: Text("대여완료"), message: Text("대여 완료하였습니다"), dismissButton: .default(Text("확인")) { moveToHome = true})
+                    
+                })
+                .fullScreenCover(isPresented: $moveToHome) {
+                    MainTabbedView()
                 }
             }
             
