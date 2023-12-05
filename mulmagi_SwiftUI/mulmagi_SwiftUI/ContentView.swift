@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -34,6 +36,18 @@ struct ContentView: View {
                 .padding()
             }
             .ignoresSafeArea()
+            .navigationBarTitle("화면", displayMode: .inline)
+            .navigationBarBackButtonHidden(false) // 뒤로 가기 버튼 표시
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss() // 이전 화면으로 돌아가기
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.darkNavy)
+                    }
+                }
+            }
         }
     }
 }
