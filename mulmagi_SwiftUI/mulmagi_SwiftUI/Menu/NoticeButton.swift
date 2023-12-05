@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct NoticeButton: View {
+    @State private var moveToNoticeView: Bool = false
+    
     var body: some View {
-        NavigationLink(destination: NoticeView()) {
-            
+        Button {
+            moveToNoticeView.toggle()
+        } label: {
             HStack (alignment: .center, spacing: 20) {
                 Image("alarm-icon")
                     .aspectRatio(contentMode: .fit)
@@ -26,12 +29,14 @@ struct NoticeButton: View {
                     .padding(.trailing, 25)
                     .foregroundColor(.darkGray)
             }
+            .padding(EdgeInsets(top: 19, leading: 20, bottom: 19, trailing: 23))
+            .background(.white)
             
+            .cornerRadius(15)
         }
-        .padding(EdgeInsets(top: 19, leading: 20, bottom: 19, trailing: 23))
-        .background(.white)
-        
-        .cornerRadius(15)
+        .fullScreenCover(isPresented: $moveToNoticeView) {
+            NoticeView()
+        }
     }
 }
 
