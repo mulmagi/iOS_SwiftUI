@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MenuView: View {
-    let items = ["이용내역", "고객센터", "이용안내", "고객안내"]
+    let items = ["이용내역", "고객센터", "이용안내", "계정설정"]
     
     var body: some View {
         NavigationView {

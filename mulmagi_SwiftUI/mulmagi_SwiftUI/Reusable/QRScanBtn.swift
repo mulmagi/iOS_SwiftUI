@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct QRScanBtn: View {
+    @State private var changeView: Bool = false
     var body: some View {
-        NavigationLink(destination: ScanView()) {
+        Button {
+            changeView.toggle()
+        } label: {
             HStack {
                 Image("scan")
                 
@@ -27,6 +30,10 @@ struct QRScanBtn: View {
             .background(Color.darkNavy)
             .cornerRadius(20)
         }
+        .fullScreenCover(isPresented: $changeView) {
+            ScanView()
+        }
+        
     }
 }
 

@@ -12,8 +12,7 @@ struct mulmagi_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabbedView()
-//            OTPView()
-//            ScanView()
+//            MenuView()
         }
     }
 }

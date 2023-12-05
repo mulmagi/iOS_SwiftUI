@@ -26,6 +26,7 @@ struct MulmagiView: View {
     @State private var isStandInfoViewVisible: Bool = false
     
     @State var userState: String = "null"
+    // null / overdue / renting
     
 
     
@@ -40,7 +41,7 @@ struct MulmagiView: View {
                         Button {
                             // TODO: StandInfo 통째로 넘겨주기
                             selectedStand = stand
-                            isStandInfoViewVisible = true
+                            isStandInfoViewVisible.toggle()
                         } label: {
                             if stand.total - stand.available.count == 0 {
                                 Image("umbrella-none")
@@ -95,11 +96,12 @@ struct MulmagiView: View {
                             .padding(.horizontal, 20)
                             .padding(.bottom, 40)
                     } else {
-                        // OverDue / Rent-ing
-                        UserRentingView()
-                            .cornerRadius(20)
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 40)
+                        if userState != "null" {
+                            UserRentingView(userState: userState)
+                                .cornerRadius(20)
+                                .padding(.horizontal, 20)
+                                .padding(.bottom, 40)
+                        }
                     }
                 }
             }

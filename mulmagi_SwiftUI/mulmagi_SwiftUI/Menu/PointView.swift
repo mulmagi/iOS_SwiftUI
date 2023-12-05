@@ -9,9 +9,13 @@ import SwiftUI
 
 struct PointView: View {
     @State private var isChargeSheetPresent: Bool = false
+    @State private var moveToPointInfoView: Bool = false
     
     var body: some View {
-        NavigationLink(destination: ContentView()) {
+        
+        Button {
+            moveToPointInfoView.toggle()
+        } label: {
             HStack {
                 VStack (alignment: .leading) {
                     HStack (spacing: 7) {
@@ -46,15 +50,14 @@ struct PointView: View {
                 .fullScreenCover(isPresented: $isChargeSheetPresent) {
                     PointChargeView()
                 }
-//                .navigationTitle("충전하기")
-
-                
                 
             }
             .padding(EdgeInsets(top: 19, leading: 25, bottom: 15, trailing: 27))
             .background(.white)
-            
             .cornerRadius(15)
+        }
+        .fullScreenCover(isPresented: $moveToPointInfoView) {
+            ContentView()
         }
     }
 }

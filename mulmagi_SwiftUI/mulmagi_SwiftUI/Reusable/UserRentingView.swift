@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct UserRentingView: View {
-    @State var userState = "overdue"
+    @State var userState: String
+    // null / renting / overdue
     @State private var date: Date = Date() // TODO: Api로 가져오기
     @State private var overdueAmount = "1, 000"
 
@@ -108,6 +109,6 @@ struct UserRentingView: View {
 
 struct UserRentingView_Previews: PreviewProvider {
     static var previews: some View {
-        UserRentingView()
+        UserRentingView(userState: "null")
     }
 }
