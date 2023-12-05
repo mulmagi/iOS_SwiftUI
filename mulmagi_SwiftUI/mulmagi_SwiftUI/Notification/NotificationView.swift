@@ -38,7 +38,7 @@ struct NotificationView: View {
             .navigationBarItems(trailing: Button(action: {
                 self.isAlarm.toggle()
             }, label: {
-                Image(isAlarm ? "alarm-icon" : "menu-icon")
+                Image(isAlarm ? "alarm-icon" : "alarm-off")
                     .frame(width: 27, height: 22, alignment: .leading)
                     .foregroundColor(.darkNavy)
                     .padding(.trailing, 15)
