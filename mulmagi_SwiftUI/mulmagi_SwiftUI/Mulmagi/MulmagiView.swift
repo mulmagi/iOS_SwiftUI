@@ -41,16 +41,20 @@ struct MulmagiView: View {
                         Button {
                             // TODO: StandInfo 통째로 넘겨주기
                             selectedStand = stand
-                            isStandInfoViewVisible.toggle()
+                            isStandInfoViewVisible = true
+                            print(stand.name)
+                            
                         } label: {
-                            if stand.total - stand.available.count == 0 {
+                            if stand.available.count == 0 {
                                 Image("umbrella-none")
                             } else {
                                 Image("umbrella-exist")
                             }
                         }
                     }
+
                 }
+                .highPriorityGesture(TapGesture())
                 .accentColor(.blue)
                 .onAppear {
                     let manager = CLLocationManager()
@@ -58,12 +62,8 @@ struct MulmagiView: View {
                     manager.startUpdatingLocation()
                     loadUmbrellaStands()
                 }
-//                .onChange(of: locationManager.location) { newLocation in
-//                    if let coordinate = newLocation?.coordinate {
-//                        region.center = coordinate
-//                    }
-//                }
                 .ignoresSafeArea()
+
 
                 
                 VStack {
@@ -110,12 +110,13 @@ struct MulmagiView: View {
         .onTapGesture {
             isStandInfoViewVisible = false
         }
+        
     }
                 
     private func loadUmbrellaStands() {
         umbrellaStands = [
             UmbrellaStand(id: 1, location: CLLocationCoordinate2D(latitude: 37.5094195, longitude: 127.0031263), name: "비둘기 공원", total: 10, available: [1, 3, 4, 12]),
-            UmbrellaStand(id: 2, location: CLLocationCoordinate2D(latitude: 37.5016116, longitude: 127.0047678), name: "가톨릭대학교 서울성모병원", total: 3, available: [3, 1, 9])
+            UmbrellaStand(id: 2, location: CLLocationCoordinate2D(latitude: 37.5016116, longitude: 127.0047678), name: "가톨릭대학교 서울성모병원", total: 10, available: [])
         ]
     }
 }
