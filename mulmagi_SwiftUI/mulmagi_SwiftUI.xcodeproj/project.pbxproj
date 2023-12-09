@@ -18,6 +18,8 @@
 		B61F45BD2B1E42420056C172 /* UsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F45BC2B1E42420056C172 /* UsageView.swift */; };
 		B64E95CF2B24AC6E006FF67D /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E95CE2B24AC6E006FF67D /* MessageView.swift */; };
 		B64E95D32B24BF2E006FF67D /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E95D22B24BF2E006FF67D /* Date+Helpers.swift */; };
+		B64E95D52B24D449006FF67D /* PointInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E95D42B24D449006FF67D /* PointInfoView.swift */; };
+		B64E95D72B24D5D1006FF67D /* PointHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E95D62B24D5D1006FF67D /* PointHistory.swift */; };
 		B654980E2B18EA6700CFBAE5 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B654980D2B18EA6700CFBAE5 /* NameView.swift */; };
 		B65498152B19A76600CFBAE5 /* PhoneNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65498142B19A76600CFBAE5 /* PhoneNumView.swift */; };
 		B65D76212AFCC34B00503C76 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D76202AFCC34B00503C76 /* PointView.swift */; };
@@ -66,6 +68,8 @@
 		B61F45BC2B1E42420056C172 /* UsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageView.swift; sourceTree = "<group>"; };
 		B64E95CE2B24AC6E006FF67D /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B64E95D22B24BF2E006FF67D /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
+		B64E95D42B24D449006FF67D /* PointInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointInfoView.swift; sourceTree = "<group>"; };
+		B64E95D62B24D5D1006FF67D /* PointHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointHistory.swift; sourceTree = "<group>"; };
 		B654980D2B18EA6700CFBAE5 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		B65498142B19A76600CFBAE5 /* PhoneNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumView.swift; sourceTree = "<group>"; };
 		B65D76202AFCC34B00503C76 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				B61F45B82B1E2C430056C172 /* PointChargeView.swift */,
+				B64E95D42B24D449006FF67D /* PointInfoView.swift */,
 			);
 			path = Point;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				B6D7816D2B205BBA00269FAE /* Chat.swift */,
 				B6EA75462B15D1FB00703BCE /* UmbrellaStand.swift */,
 				B67C82A82B187CF000800F35 /* Permission.swift */,
+				B64E95D62B24D5D1006FF67D /* PointHistory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -386,11 +392,13 @@
 				B61F45B92B1E2C430056C172 /* PointChargeView.swift in Sources */,
 				B654980E2B18EA6700CFBAE5 /* NameView.swift in Sources */,
 				B6B152F02B1C651200DF2938 /* PrivacyPolicyView.swift in Sources */,
+				B64E95D72B24D5D1006FF67D /* PointHistory.swift in Sources */,
 				B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */,
 				B65D76232AFCCED200503C76 /* MenuButton.swift in Sources */,
 				B6B152F22B1C6ADC00DF2938 /* StandInfoView.swift in Sources */,
 				B6D68FAD2B063F2700FD5A14 /* NoticeDetailView.swift in Sources */,
 				B66B91912AEA2B5E006CF777 /* mulmagi_SwiftUIApp.swift in Sources */,
+				B64E95D52B24D449006FF67D /* PointInfoView.swift in Sources */,
 				B6D68FA32B03311600FD5A14 /* NotificationView.swift in Sources */,
 				B60C2A032B079FF50083715B /* MulmagiView.swift in Sources */,
 				B6D68FA82B03521600FD5A14 /* TempData.swift in Sources */,
