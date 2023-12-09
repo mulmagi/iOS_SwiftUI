@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 //{
 //    "statusCode": 200,
 //    "responseMessage": "메시지 목록 불러오기 성공"
@@ -34,7 +35,7 @@ import Foundation
 //  ]
 //}
 
-struct Chat {
+struct Chat: Identifiable {
     let id: Int
     let userId: Int
     let contents: String
@@ -42,3 +43,12 @@ struct Chat {
     let isAdmin: Bool
     let date: Date
 }
+
+let chatMessage = [
+    Chat(id: 1, userId: 1, contents: "안녕하세요. 무엇을 도와드릴까요?\n상담원의 답변까지 약 10분이 소요됩니다.", contentType: "TEXT", isAdmin: true, date: Date(timeInterval: 300, since: Date())),
+    Chat(id: 2, userId: 1, contents: "나는 손님이용.", contentType: "TEXT", isAdmin: false, date: Date(timeInterval: 300, since: Date())),
+    Chat(id: 3, userId: 1, contents: "문의 좀 하고 싶쏭ㅇ .", contentType: "TEXT", isAdmin: false, date: Date(timeInterval: 300, since: Date())),
+    Chat(id: 4, userId: 1, contents: "환불 plz,,,", contentType: "TEXT", isAdmin: false, date: Date(timeInterval: 300, since: Date())),
+    Chat(id: 5, userId: 1, contents: "물막이 임댕.", contentType: "TEXT", isAdmin: true, date: Date(timeInterval: 300, since: Date())),
+    Chat(id: 6, userId: 1, contents: "죄송합니다 고객님.이용약관 내에 기재되어있는 사항으로,1년이 지난 결제 금액은 환불이 불가합니다.", contentType: "TEXT", isAdmin: true, date: Date(timeInterval: 300, since: Date()))
+]
