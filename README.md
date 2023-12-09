@@ -20,7 +20,9 @@
 ### 🛠 Development Environment
 
 ### :sparkles: Skills & Tech Stack
+[FrontEnd]
 * SwiftUI
+* Alamofire
 * Git
 
 
