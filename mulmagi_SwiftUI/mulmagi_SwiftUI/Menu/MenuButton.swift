@@ -63,7 +63,7 @@ private func destinationView(menuName: String) -> AnyView {
     case "이용내역":
         return AnyView(UsageView())
     case "고객센터":
-        return AnyView(ContentView())
+        return AnyView(ChatView())
     case "이용안내":
         return AnyView(UseInfoView())
     case "계정설정":

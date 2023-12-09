@@ -8,35 +8,55 @@
 import SwiftUI
 
 struct ChatView: View {
+    @Environment(\.presentationMode) var presentationMode
+
     @State private var text = ""
     @FocusState private var isFocused
     @State private var messageIDToScroll: UUID?
     
     var body: some View {
-        
-        VStack {
-            GeometryReader { reader in
-                ScrollView {
-                    ScrollViewReader { scrollReader in
-                        getMessagesView(viewWidth: reader.size.width)
-                            .padding(.horizontal, 20)
-                            .onChange(of: messageIDToScroll) { _ in
-                                if let messageID = messageIDToScroll {
-                                    scrollTo(messageId: messageID, shouldAnimate: true, scrollReader: scrollReader)
+        NavigationView {
+            
+            VStack {
+                GeometryReader { reader in
+                    ScrollView {
+                        ScrollViewReader { scrollReader in
+                            getMessagesView(viewWidth: reader.size.width)
+                                .padding(.horizontal, 20)
+                                .onChange(of: messageIDToScroll) { _ in
+                                    if let messageID = messageIDToScroll {
+                                        scrollTo(messageId: messageID, shouldAnimate: true, scrollReader: scrollReader)
+                                    }
                                 }
-                            }
-                            .onAppear {
-                                if let messageId = chatMessage.last?.id {
-                                    scrollTo(messageId: messageId, anchor: .bottom, shouldAnimate: true, scrollReader: scrollReader)
+                                .onAppear {
+                                    if let messageId = chatMessage.last?.id {
+                                        scrollTo(messageId: messageId, anchor: .bottom, shouldAnimate: true, scrollReader: scrollReader)
+                                    }
                                 }
-                            }
+                        }
+                        
                     }
-                    
+                }
+                .padding(.bottom, 5)
+                .padding(.top, 10)
+                
+                toolBarView()
+            }
+            .navigationBarTitle("고객센터", displayMode: .inline)
+            .navigationBarBackButtonHidden(false) // 뒤로 가기 버튼 표시
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss() // 이전 화면으로 돌아가기
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.darkNavy)
+                    }
                 }
             }
-            toolBarView()
+            .background(Color.backgroundBlue)
         }
-        .background(Color.backgroundBlue)
+        
     }
     
     func scrollTo(messageId: UUID, anchor: UnitPoint? = nil, shouldAnimate: Bool, scrollReader: ScrollViewProxy) {
@@ -81,11 +101,9 @@ struct ChatView: View {
         .background(.thickMaterial)
     }
     
-    private func formatDate(_ date: Date) -> String {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yy. MM. dd"
-            return formatter.string(from: date)
-        }
+
+    
+    
 }
 
 struct ChatView_Previews: PreviewProvider {
