@@ -18,7 +18,7 @@ extension Date {
         return formatter.string(from: date)
     }
     
-    func descriptiveStrinig(dateStyle: DateFormatter.Style = .short) -> String {
+    func descriptiveString(dateStyle: DateFormatter.Style = .short) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = dateStyle
         

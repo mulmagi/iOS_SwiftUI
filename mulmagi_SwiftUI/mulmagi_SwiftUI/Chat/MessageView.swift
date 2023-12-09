@@ -66,7 +66,7 @@ func sectionHeader(firstMessage message: Chat) -> some View {
     ZStack {
         Color.backgroundBlue
         
-        Text(message.date.descriptiveStrinig(dateStyle: .full))
+        Text(message.date.descriptiveString(dateStyle: .full))
             .font(.system(size: 11))
             .foregroundColor(.black.opacity(0.6))
             .padding(.vertical, 5)
