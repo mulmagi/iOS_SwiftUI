@@ -57,7 +57,7 @@ struct PointView: View {
             .cornerRadius(15)
         }
         .fullScreenCover(isPresented: $moveToPointInfoView) {
-            ContentView()
+            PointInfoView()
         }
     }
 }
