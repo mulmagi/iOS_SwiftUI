@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PointView: View {
+    
     @State private var isChargeSheetPresent: Bool = false
     @State private var moveToPointInfoView: Bool = false
     
@@ -57,7 +58,7 @@ struct PointView: View {
             .cornerRadius(15)
         }
         .fullScreenCover(isPresented: $moveToPointInfoView) {
-            ContentView()
+            PointInfoView()
         }
     }
 }

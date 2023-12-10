@@ -19,6 +19,7 @@ struct UseInfoView: View {
                 Spacer()
             }
             .background(Color.backgroundBlue)
+
             .navigationBarTitle("이용안내", displayMode: .inline)
             .navigationBarBackButtonHidden(false) // 뒤로 가기 버튼 표시
             .toolbar {
