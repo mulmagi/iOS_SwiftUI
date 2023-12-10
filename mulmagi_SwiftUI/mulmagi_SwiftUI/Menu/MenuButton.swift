@@ -67,7 +67,7 @@ private func destinationView(menuName: String) -> AnyView {
     case "이용안내":
         return AnyView(UseInfoView())
     case "계정설정":
-        return AnyView(ContentView())
+        return AnyView(AccountView())
     default:
         return AnyView(ContentView())
     }

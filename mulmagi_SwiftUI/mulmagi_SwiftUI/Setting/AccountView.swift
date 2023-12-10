@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AccountView: View {
+    @Environment(\.presentationMode) var presentationMode
+
     @State var showLogoutAlert: Bool = false
     @State var showWidthdrawAlert: Bool = false
     
@@ -63,6 +65,18 @@ struct AccountView: View {
                 }
                 .padding(.bottom, 32)
                 .listStyle(InsetGroupedListStyle())
+            }
+            .navigationBarTitle("설정", displayMode: .inline)
+            .navigationBarBackButtonHidden(false) // 뒤로 가기 버튼 표시
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss() // 이전 화면으로 돌아가기
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.darkNavy)
+                    }
+                }
             }
         }
         .foregroundColor(.darkNavy)

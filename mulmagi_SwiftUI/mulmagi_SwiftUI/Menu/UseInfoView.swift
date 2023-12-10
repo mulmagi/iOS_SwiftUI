@@ -19,13 +19,19 @@ struct UseInfoView: View {
                 Spacer()
             }
             .background(Color.backgroundBlue)
-            .navigationTitle("이용안내")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(leading: BackButton())
-            .navigationBarBackButtonHidden(true)
-            
+
             .navigationBarTitle("이용안내", displayMode: .inline)
-            .navigationBarBackButtonHidden(false)
+            .navigationBarBackButtonHidden(false) // 뒤로 가기 버튼 표시
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss() // 이전 화면으로 돌아가기
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.darkNavy)
+                    }
+                }
+            }
         }
     }
 }
