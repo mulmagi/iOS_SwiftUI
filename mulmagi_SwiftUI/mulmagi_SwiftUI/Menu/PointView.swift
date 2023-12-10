@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PointView: View {
+    
     @State private var isChargeSheetPresent: Bool = false
     @State private var moveToPointInfoView: Bool = false
     

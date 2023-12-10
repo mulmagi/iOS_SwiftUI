@@ -23,7 +23,9 @@ struct AccountView: View {
                             .font(.light13)
                     }
                     
-                    NavigationLink("이용약관", destination: TOSView())
+                    NavigationLink(destination: TOSView()) {
+                        Text("이용약관")
+                    }
                         .font(.medium15)
                     
                     Section(header: Text("계정")) {

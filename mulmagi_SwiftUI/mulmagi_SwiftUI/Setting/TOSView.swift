@@ -9,7 +9,21 @@ import SwiftUI
 
 struct TOSView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                WhiteBoxView(menuName: "이용약관")
+                    .padding(.horizontal, 12)
+                    .padding(.top, 25)
+                Spacer()
+            }
+            .background(Color.backgroundBlue)
+            
+        }
+        .navigationTitle("이용약관")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(leading: BackButton())
+        .navigationBarBackButtonHidden(true)
+    
     }
 }
 
