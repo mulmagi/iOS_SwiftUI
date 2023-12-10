@@ -15,12 +15,13 @@ struct FirstView: View {
                 
                 VStack(alignment: .center) {
                     VStack {
-                        Text("갑자기 비가 오는데")
+                        Text("갑자기 비가 오는데,")
                         Text("우산이 없으신 당신에게!")
                     }
                     .font(.bold20)
                     .padding(.bottom, 30)
                     .padding(.top, 300)
+                    .foregroundColor(.darkNavy)
                     
                     Image("logo")
                     Spacer()

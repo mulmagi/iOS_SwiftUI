@@ -24,6 +24,8 @@ struct NameView: View {
                     .padding(.bottom, 6)
                 
                 TextField("", text: $userName)
+                    .multilineTextAlignment(.leading)
+                    .padding(.leading, 20)
                     .frame(height: 46)
                     .overlay(RoundedRectangle(cornerRadius: 15)
                         .stroke(Color.darkNavy, lineWidth: 0.5))
@@ -59,7 +61,10 @@ struct NameView: View {
             }
             .padding(.horizontal, 20)
         }
-        .navigationTitle("회원가입")
+        .navigationTitle("회원가입 / 로그인")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(leading: BackButton())
+        .navigationBarBackButtonHidden(true)
     }
 }
 

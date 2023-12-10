@@ -32,6 +32,8 @@ struct PhoneNumView: View {
                 
                 // Input: phoneNum
                 TextField("휴대폰 번호(-없이 숫자만 입력)", text: $phoneNum)
+                    .multilineTextAlignment(.leading)
+                    .keyboardType(.numberPad)
                     .padding(.leading, 20)
                     .frame(height: 46)
                     .foregroundColor(.darkNavy)
@@ -73,6 +75,7 @@ struct PhoneNumView: View {
                 if isButtonClicked {
                     // Input: Certification Number
                     TextField("인증번호 입력", text: $certificateNum)
+                        .keyboardType(.numberPad)
                         .padding(.leading, 20)
                         .frame(height: 46)
                         .foregroundColor(.darkNavy)
@@ -132,7 +135,8 @@ struct PhoneNumView: View {
             .padding(.horizontal, 20)
             
         }
-        .navigationTitle("회원가입")
+        .navigationBarBackButtonHidden(true)
+        
         .fullScreenCover(isPresented: $isLoginSuccess) {
             MainTabbedView()
         }
