@@ -49,10 +49,18 @@ struct MulmagiView: View {
                             print(stand.name)
                             
                         } label: {
-                            if stand.available.count == 0 {
-                                Image("umbrella-none")
+                            if user.state == "null" {
+                                if stand.available.count == 0 {
+                                    Image("umbrella-none")
+                                } else {
+                                    Image("umbrella-exist")
+                                }
                             } else {
-                                Image("umbrella-exist")
+                                if stand.available.count == 0 {
+                                    Image("umbrella-exist")
+                                } else {
+                                    Image("umbrella-none")
+                                }
                             }
                         }
                     }
@@ -101,6 +109,9 @@ struct MulmagiView: View {
                         .padding(.trailing, 26)
                     }
                 }
+                .opacity(user.state == "null" ? 1 : 0)
+                
+                
                 // UmbrellaStand View
                 VStack {
                     Spacer()

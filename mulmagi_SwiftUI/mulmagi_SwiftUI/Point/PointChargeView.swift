@@ -109,7 +109,7 @@ struct PointChargeView: View {
                         // TODO: 결제 API
                         paymentComplete.toggle()
                         user.point = "11, 000"
-                        user.restPoint = "0"
+                        user.restPoint = "1, 000"
                         user.didCharge = true
                         print("GO BACK!!!!!!!!")
                         

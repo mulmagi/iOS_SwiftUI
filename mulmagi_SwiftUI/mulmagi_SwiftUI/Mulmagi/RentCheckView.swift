@@ -93,7 +93,7 @@ struct RentCheckView: View {
                                 .font(.medium10)
                                 .foregroundColor(.darkNavy)
                             Spacer()
-                            Text("- 10, 000 P")
+                            Text("-  9, 000 P")
                                 .font(.light13)
                                 .foregroundColor(.darkNavy)
                                 .padding(.trailing, 100)

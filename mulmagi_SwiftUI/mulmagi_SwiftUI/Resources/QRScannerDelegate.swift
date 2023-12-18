@@ -26,7 +26,7 @@ class QRScannerDelegate: NSObject, ObservableObject, AVCaptureMetadataOutputObje
             print(scannedCode)
             
             // TODO: Fix QR Number
-            if scannedCode == "CustomData:748753" || scannedCode == "CustomData:993867" {
+            if scannedCode == "CustomData:748753" || scannedCode == "CustomData:695066" {
                 DispatchQueue.main.async {
                     print("CORRECT")
                     self.isCorrectCode = true
