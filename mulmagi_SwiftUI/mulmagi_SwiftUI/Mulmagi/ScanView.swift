@@ -19,6 +19,7 @@ struct ScanView: View {
     @ObservedObject private var qrDelegate = QRScannerDelegate()
     @State private var isCorrectCode: Bool = false
     @State private var moveToOTP: Bool = false
+    
     @State private var moveToHome: Bool = false
     
     var body: some View {
@@ -105,11 +106,11 @@ struct ScanView: View {
 
                 }
                 .alert(isPresented: $qrDelegate.isCorrectCode, content: {
-                    Alert(title: Text("대여완료"), message: Text("대여 완료하였습니다"), dismissButton: .default(Text("확인")) { moveToHome = true})
+                    Alert(title: Text("대여하기"), message: Text("대여하시겠습니까?"), primaryButton: .cancel(Text("취소")), secondaryButton: .default(Text("확인")) { moveToHome = true})
                     
                 })
                 .fullScreenCover(isPresented: $moveToHome) {
-                    MainTabbedView()
+                    RentCheckView()
                 }
             }
             

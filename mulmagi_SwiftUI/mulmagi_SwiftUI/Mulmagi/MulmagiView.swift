@@ -15,7 +15,7 @@ struct MulmagiView: View {
     // MKCoordinateSpan: 지도 중앙으로부터 얼마나 화면에 표시할지 지정.
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.5094195, longitude: 127.0031263),
-        span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
+        span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
     )
     @State var tracking: MapUserTrackingMode = .follow
     @ObservedObject private var locationManager = LocationManager()
@@ -57,10 +57,16 @@ struct MulmagiView: View {
                 .highPriorityGesture(TapGesture())
                 .accentColor(.blue)
                 .onAppear {
-                    let manager = CLLocationManager()
-                    manager.requestWhenInUseAuthorization()
-                    manager.startUpdatingLocation()
-                    loadUmbrellaStands()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        if let userLocation = locationManager.location?.coordinate {
+                            region.center = userLocation
+                        }
+                        
+                        let manager = CLLocationManager()
+                        manager.requestWhenInUseAuthorization()
+                        manager.startUpdatingLocation()
+                        loadUmbrellaStands()
+                    }
                 }
                 .ignoresSafeArea()
 

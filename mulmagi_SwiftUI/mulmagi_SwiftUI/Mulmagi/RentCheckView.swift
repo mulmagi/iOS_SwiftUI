@@ -9,8 +9,10 @@ import SwiftUI
 struct RentCheckView: View {
     @State var rentPlace: String = "가톨릭대학교 성모병원 2"
     @State var rentalDate: String = "2023-11-06T00:00:00"
-    @State private var needCharge: Bool = false
+    @State private var needCharge: Bool = true
     @State private var needAlert: Bool = false
+    
+    @State private var pushView: View
     
     var body: some View {
         VStack(alignment: .center) {
@@ -77,47 +79,48 @@ struct RentCheckView: View {
                                 .font(.medium10)
                                 .foregroundColor(.darkNavy)
                             Spacer()
-                            Text("15, 000 P")
+                            Text("5, 000 P")
                                 .font(.light13)
                                 .foregroundColor(.darkNavy)
-                                .padding(.trailing, 150)
+                                .padding(.trailing, 100)
                         }
                         HStack (alignment: .center) {
                             Text("보증금  ")
                                 .font(.medium10)
                                 .foregroundColor(.darkNavy)
                             Spacer()
-                            Text("- 9, 000 P")
+                            Text("- 10, 000 P")
                                 .font(.light13)
                                 .foregroundColor(.darkNavy)
-                                .padding(.trailing, 150)
+                                .padding(.trailing, 100)
                         }
                         HStack (alignment: .center) {
-                            Text("현재 포인트")
+                            Text("기본 대여료")
                                 .font(.medium10)
                                 .foregroundColor(.darkNavy)
                             Spacer()
-                            Text("15, 000 P")
+                            Text("- 1, 000 P")
                                 .font(.light13)
                                 .foregroundColor(.darkNavy)
-                                .padding(.trailing, 150)
+                                .padding(.trailing, 100)
                         }
                         
                         Divider()
-                            .frame(width: .infinity, height: 1)
-                            .background(Color.white)
+                            .frame(height: 1)
+                            .background(.white)
                         
-                        HStack (alignment: .center) {
+                        HStack(alignment: .center) {
                             Text("잔여 포인트")
                                 .font(.medium10)
                                 .foregroundColor(.darkNavy)
                             Spacer()
-                            Text("5, 000 P")
+                            Text("- 6,000 P")
                                 .font(.gmarket(.medium, size: 12))
                                 .foregroundColor(.darkNavy)
-                                .padding(.trailing, 150)
+                                .padding(.trailing, 100)
+                                .lineLimit(1)
                         }
-                    }//
+                    }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(EdgeInsets(top: 25, leading: 20, bottom: 25, trailing: 20))
                     .background(Color.backgroundBlue)
@@ -147,9 +150,12 @@ struct RentCheckView: View {
                     if needCharge {
                         // 충전 창으로 이동
                         print("Move to Charge View")
+                        pushView = PointChargeView()
+                        
                     } else {
                         // Borrorw Alert 띄우기
                         print("Alert!")
+                        pushView = MainTabbedView()
                     }
                 } label: {
                     Text(needCharge ? "충전하기" : "대여하기")
@@ -169,6 +175,7 @@ struct RentCheckView: View {
         }//
         .padding(.horizontal, 20)
         .navigationTitle("대여하기")
+        .fullScreenCover(item: <#T##Binding<Identifiable?>#>, content: <#T##(Identifiable) -> View#>)
     }
 }
 
