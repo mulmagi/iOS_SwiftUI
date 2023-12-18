@@ -9,10 +9,14 @@ import SwiftUI
 struct RentCheckView: View {
     @State var rentPlace: String = "가톨릭대학교 성모병원 2"
     @State var rentalDate: String = "2023-11-06T00:00:00"
-    @State private var needCharge: Bool = true
+//    @State private var needCharge: Bool = true
+    @EnvironmentObject var user: User
+
     @State private var needAlert: Bool = false
+    @State private var showFullScreen: Bool = false
+    @State private var moveToHome: Bool = false
     
-    @State private var pushView: View
+//    @State private var pushView: any View
     
     var body: some View {
         VStack(alignment: .center) {
@@ -49,7 +53,7 @@ struct RentCheckView: View {
                                 Text("기본 대여일")
                                     .font(.medium10)
                                     .foregroundColor(.darkNavy)
-                                Text("2023. 09. 29 - 2023. 10 .01")
+                                Text("2023. 12. 18 - 2023. 12. 24")
                                     .font(.light10)
                                     .foregroundColor(.midGray)
                             }
@@ -79,7 +83,7 @@ struct RentCheckView: View {
                                 .font(.medium10)
                                 .foregroundColor(.darkNavy)
                             Spacer()
-                            Text("5, 000 P")
+                            Text(user.point + " P")
                                 .font(.light13)
                                 .foregroundColor(.darkNavy)
                                 .padding(.trailing, 100)
@@ -114,7 +118,7 @@ struct RentCheckView: View {
                                 .font(.medium10)
                                 .foregroundColor(.darkNavy)
                             Spacer()
-                            Text("- 6,000 P")
+                            Text(user.restPoint + " P")
                                 .font(.gmarket(.medium, size: 12))
                                 .foregroundColor(.darkNavy)
                                 .padding(.trailing, 100)
@@ -147,18 +151,24 @@ struct RentCheckView: View {
                 
                 Button {
                     // Charge or Borrow
-                    if needCharge {
+                    if user.needCharge && !user.didCharge{
                         // 충전 창으로 이동
+                        showFullScreen.toggle()
+
                         print("Move to Charge View")
-                        pushView = PointChargeView()
                         
-                    } else {
+                        //                        pushView = PointChargeView()
+                        
+                    }
+                    if user.didCharge {
                         // Borrorw Alert 띄우기
                         print("Alert!")
-                        pushView = MainTabbedView()
+                        moveToHome = true
+                        user.state = "renting"
+                        //                        pushView = MainTabbedView()
                     }
                 } label: {
-                    Text(needCharge ? "충전하기" : "대여하기")
+                    Text(user.point != "11, 000" ? "충전하기" : "대여하기")
                         .font(.medium17)
                         .frame(maxWidth: .infinity)
                         .frame(height: 60)
@@ -172,15 +182,26 @@ struct RentCheckView: View {
                 Alert(title: Text("대여 완료"), message: Text("대여 완료 되었습니다."), dismissButton: .default(Text("확인")))
             })
             .padding(.bottom, 10)
-        }//
+            .fullScreenCover(isPresented: $showFullScreen) {
+                if user.needCharge && !moveToHome {
+                    PointChargeView()
+                }
+                //                } else {
+                //                    MainTabbedView()
+                //                }
+            }
+            .fullScreenCover(isPresented: $moveToHome) {
+                MainTabbedView()
+            }//
+        }
         .padding(.horizontal, 20)
         .navigationTitle("대여하기")
-        .fullScreenCover(item: <#T##Binding<Identifiable?>#>, content: <#T##(Identifiable) -> View#>)
+
     }
 }
 
-struct RentCheckView_Previews: PreviewProvider {
-    static var previews: some View {
-        RentCheckView()
-    }
-}
+//struct RentCheckView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RentCheckView()
+//    }
+//}

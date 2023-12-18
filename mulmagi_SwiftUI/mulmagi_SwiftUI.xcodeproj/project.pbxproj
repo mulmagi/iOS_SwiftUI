@@ -58,6 +58,7 @@
 		B6E765F22B1CD6E7004F11B7 /* UserRentingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E765F12B1CD6E7004F11B7 /* UserRentingView.swift */; };
 		B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA75442B15CBF000703BCE /* LocationManager.swift */; };
 		B6EA75472B15D1FB00703BCE /* UmbrellaStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA75462B15D1FB00703BCE /* UmbrellaStand.swift */; };
+		B6F830D82B306ACB009C6AD3 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F830D72B306ACB009C6AD3 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		B6E765F12B1CD6E7004F11B7 /* UserRentingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRentingView.swift; sourceTree = "<group>"; };
 		B6EA75442B15CBF000703BCE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B6EA75462B15D1FB00703BCE /* UmbrellaStand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaStand.swift; sourceTree = "<group>"; };
+		B6F830D72B306ACB009C6AD3 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 				B6EA75462B15D1FB00703BCE /* UmbrellaStand.swift */,
 				B67C82A82B187CF000800F35 /* Permission.swift */,
 				B64E95D62B24D5D1006FF67D /* PointHistory.swift */,
+				B6F830D72B306ACB009C6AD3 /* MockData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				B67C82A52B1853F100800F35 /* CameraView.swift in Sources */,
 				B61F45B92B1E2C430056C172 /* PointChargeView.swift in Sources */,
 				B654980E2B18EA6700CFBAE5 /* NameView.swift in Sources */,
+				B6F830D82B306ACB009C6AD3 /* MockData.swift in Sources */,
 				B6B152F02B1C651200DF2938 /* PrivacyPolicyView.swift in Sources */,
 				B64E95D72B24D5D1006FF67D /* PointHistory.swift in Sources */,
 				B6EA75452B15CBF000703BCE /* LocationManager.swift in Sources */,

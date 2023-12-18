@@ -13,7 +13,9 @@ struct PointChargeView: View {
     let amountOptions = ["1, 000 포인트 / 1, 000원", "3, 000 포인트 / 3, 000원", "5, 000 포인트 / 5, 000원", "10, 000 포인트 / 10, 000원", "20, 000 포인트 / 20, 000원"]
     let paymentOptions = ["카카오페이", "애플페이", "네이버페이"]
     
-    @State private var userPoint: Int = 8000
+    @EnvironmentObject var user: User
+
+    //    @State private var userPoint: Int = 8000
     @State private var selectedAmountOption: String?
     @State private var selectedPaymentOption: String?
     
@@ -32,7 +34,7 @@ struct PointChargeView: View {
                         Text("현재 포인트")
                             .font(.medium15)
                         Spacer()
-                        Text("\(userPoint) 포인트")
+                        Text("\(user.point) 포인트")
                             .font(.medium15)
                     }
                     .foregroundColor(.darkNavy)
@@ -106,6 +108,10 @@ struct PointChargeView: View {
                     Button {
                         // TODO: 결제 API
                         paymentComplete.toggle()
+                        user.point = "11, 000"
+                        user.restPoint = "0"
+                        user.didCharge = true
+                        print("GO BACK!!!!!!!!")
                         
                     } label: {
                         Text("결제하기")
@@ -125,7 +131,9 @@ struct PointChargeView: View {
                     .padding(.bottom, 10)
                     .disabled(selectedAmountOption == nil || selectedPaymentOption == nil)
                     .fullScreenCover(isPresented: $paymentComplete) {
-                        MainTabbedView()
+//                        MainTabbedView()
+                        RentCheckView()
+                        
                     }
                     
                     

@@ -9,12 +9,14 @@ import SwiftUI
 
 @main
 struct mulmagi_SwiftUIApp: App {
+    @StateObject var user = User(state: "null", point: "1, 000", needCharge: true, restPoint: "- 10, 000", didCharge: false)
+
     var body: some Scene {
         WindowGroup {
-            RentCheckView()
-//            FirstView()
-//            ChatView()
-//            MenuView()
+            FirstView()
+//            MainTabbedView()
+//            RentCheckView()
+                .environmentObject(user)
         }
     }
 }

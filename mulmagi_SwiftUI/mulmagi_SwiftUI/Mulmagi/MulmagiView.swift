@@ -24,8 +24,12 @@ struct MulmagiView: View {
     
     @State var selectedStand: UmbrellaStand?
     @State private var isStandInfoViewVisible: Bool = false
-    
-    @State var userState: String = "null"
+    @EnvironmentObject var user: User
+    @State private var tapLocation: CGPoint? = nil
+
+//    @StateObject var user = User(state: "null", point: "1, 000", needCharge: true, restPoint: "- 10, 000")
+
+//    @State var userState: String = "null"
     // null / overdue / renting
     
 
@@ -54,6 +58,10 @@ struct MulmagiView: View {
                     }
 
                 }
+                .onTapGesture {
+                    print("umbrella touched")
+                    isStandInfoViewVisible = true
+                }
                 .highPriorityGesture(TapGesture())
                 .accentColor(.blue)
                 .onAppear {
@@ -69,9 +77,10 @@ struct MulmagiView: View {
                     }
                 }
                 .ignoresSafeArea()
-
-
                 
+
+
+                // Top QRScan Btn
                 VStack {
                     QRScanBtn()
                         .padding(.top, 10)
@@ -92,30 +101,34 @@ struct MulmagiView: View {
                         .padding(.trailing, 26)
                     }
                 }
-                
+                // UmbrellaStand View
                 VStack {
                     Spacer()
                     
-                    if isStandInfoViewVisible && userState == "null" {
+                    if isStandInfoViewVisible && user.state == "null" {
                         StandInfoView(standInfo: $selectedStand)
                             .cornerRadius(20)
                             .padding(.horizontal, 20)
                             .padding(.bottom, 40)
                     } else {
-                        if userState != "null" {
-                            UserRentingView(userState: userState)
+                        if user.state != "null" {
+                            UserRentingView(userState: user.state)
                                 .cornerRadius(20)
                                 .padding(.horizontal, 20)
                                 .padding(.bottom, 40)
                         }
                     }
                 }
+//                .interactiveDismissDisabled(true)
             }
         
         }
-        .onTapGesture {
-            isStandInfoViewVisible = false
-        }
+//        .onTapGesture {
+//            print("OK")
+//            isStandInfoViewVisible = false
+//        }
+//        .interactiveDismissDisabled(true)
+        
         
     }
                 
@@ -124,6 +137,13 @@ struct MulmagiView: View {
             UmbrellaStand(id: 1, location: CLLocationCoordinate2D(latitude: 37.5094195, longitude: 127.0031263), name: "비둘기 공원", total: 10, available: [1, 3, 4, 12]),
             UmbrellaStand(id: 2, location: CLLocationCoordinate2D(latitude: 37.5016116, longitude: 127.0047678), name: "가톨릭대학교 서울성모병원", total: 10, available: [])
         ]
+    }
+    
+    func hitTest(_ location: CGPoint) -> Bool {
+        // Implement hit testing logic based on the position of the umbrella image
+        // Return true if the tap is within the bounds of the umbrella image, otherwise return false
+        // You may need to calculate the position of the umbrella image within the coordinate space of the map
+        return false
     }
 }
 

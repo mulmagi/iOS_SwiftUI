@@ -11,6 +11,7 @@ import AVFoundation
 // QRScan and Decode (Print Result at Console)
 class QRScannerDelegate: NSObject, ObservableObject, AVCaptureMetadataOutputObjectsDelegate {
     @Published var isCorrectCode: Bool = false
+    @Published var isUnable: Bool = false
 
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
@@ -25,11 +26,17 @@ class QRScannerDelegate: NSObject, ObservableObject, AVCaptureMetadataOutputObje
             print(scannedCode)
             
             // TODO: Fix QR Number
-            if scannedCode == "CustomData:654532" {
+            if scannedCode == "CustomData:748753" || scannedCode == "CustomData:993867" {
                 DispatchQueue.main.async {
+                    print("CORRECT")
                     self.isCorrectCode = true
                 }
                 
+            }
+            if scannedCode == "http://en.m.wikipedia.org" {
+                DispatchQueue.main.async {
+                    self.isUnable = true
+                }
             }
         }
     }

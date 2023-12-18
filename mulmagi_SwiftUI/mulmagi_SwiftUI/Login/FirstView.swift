@@ -23,7 +23,8 @@ struct FirstView: View {
                     .padding(.top, 300)
                     .foregroundColor(.darkNavy)
                     
-                    Image("logo")
+                    Image("Logo")
+                        
                     Spacer()
                     
                     NavigationLink(destination: NameView()) {

@@ -21,6 +21,8 @@ struct ScanView: View {
     @State private var moveToOTP: Bool = false
     
     @State private var moveToHome: Bool = false
+    @State private var denyScan: Bool = true
+    @State private var moveBack: Bool = false
     
     var body: some View {
         ZStack {
@@ -105,12 +107,44 @@ struct ScanView: View {
                     
 
                 }
-                .alert(isPresented: $qrDelegate.isCorrectCode, content: {
-                    Alert(title: Text("대여하기"), message: Text("대여하시겠습니까?"), primaryButton: .cancel(Text("취소")), secondaryButton: .default(Text("확인")) { moveToHome = true})
-                    
-                })
+                .alert(isPresented: Binding<Bool>(
+                    get: { qrDelegate.isCorrectCode || qrDelegate.isUnable },
+                    set: { _, _ in }
+                )) {
+                    if qrDelegate.isCorrectCode {
+                        return Alert(
+                            title: Text("대여하기"),
+                            message: Text("대여하시겠습니까?"),
+                            primaryButton: .cancel(Text("취소")),
+                            secondaryButton: .default(Text("확인")) {
+                                moveToHome = true
+                            }
+                        )
+                    } else if qrDelegate.isUnable {
+                        return Alert(
+                            title: Text("대여불가"),
+                            message: Text("대여 가능한 우산이 없습니다."),
+                            dismissButton: .default(Text("확인")) {
+                                moveBack = true
+                            }
+                        )
+                    } else {
+                        return Alert(title: Text(""), message: Text("")) // Empty alert when neither condition is true
+                    }
+                }
+                
+//                .alert(isPresented: $qrDelegate.isUnable, content: {
+//                    Alert(title: Text("대여불가"), message: Text("대여 가능한 우산이 없습니다."), dismissButton: .default(Text("확인")) { moveBack = true})
+//                })
+//                .alert(isPresented: $qrDelegate.isCorrectCode, content: {
+//                    return Alert(title: Text("대여하기"), message: Text("대여하시겠습니까?"), primaryButton: .cancel(Text("취소")), secondaryButton: .default(Text("확인")) { moveToHome = true})
+//
+//                })
                 .fullScreenCover(isPresented: $moveToHome) {
                     RentCheckView()
+                }
+                .fullScreenCover(isPresented: $moveBack) {
+                    MainTabbedView()
                 }
             }
             
