@@ -31,6 +31,8 @@
 | Name              | Version |       |
 | ----------------- | :-----: | ----- |
 | Alamofire           | ` ` | `--` |
+| RxSwift           | ` ` | `--` |
+| iamPort           | ` ` | `--` |
 
 ### 🔀 Git branch
 
